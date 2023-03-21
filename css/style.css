@@ -1,12 +1,13 @@
-@import 'normalize.css';
-@import 'variables.scss';
-
 *,
 *:before,
 *:after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+
+body {
+  background-color: #f8f8ff;
 }
 
 .container {
@@ -17,7 +18,7 @@
   margin: 0 auto;
 }
 
-//------------------HEADER--------------------
+/*------------------HEADER--------------------*/
 .header__inner {
   display: flex;
   flex-direction: column;
@@ -30,8 +31,21 @@
 }
 
 .logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo_img {
   width: 200px;
   height: auto;
+}
+
+.club_name {
+  margin-top: 40px;
+  width: 400px;
+  text-align: center;
+  font-weight: 500;
 }
 
 .menu {
@@ -40,7 +54,7 @@
   gap: 10rem;
 }
 
-.menu a {
+.nav__link {
   text-decoration: none;
   color: #333;
   font-size: 1.7rem;
@@ -48,11 +62,11 @@
   text-align: center;
 }
 
-.menu a:hover {
-  color: rgb(48, 41, 184);
+.nav__link:hover {
+  color: #104489;
 }
 
-//------------------SIGN--------------------
+/*------------------SIGN--------------------*/
 .container-sign {
   display: flex;
   flex-direction: column;
@@ -64,14 +78,14 @@
 
 .submit-btn {
   position: relative;
-  padding: 10px 20px;
+  padding: 16px;
   border-radius: 7px;
-  border: 1px solid rgb(61, 106, 255);
+  border: 1px solid #104489;
   font-size: 14px;
   text-transform: uppercase;
-  font-weight: 600;
+  font-weight: 500;
   letter-spacing: 2px;
-  background: rgb(61, 106, 255);
+  background: #104489;
   color: #fff;
   overflow: hidden;
   box-shadow: 0 0 0 0 transparent;
@@ -81,7 +95,7 @@
 }
 
 .submit-btn:hover {
-  background: rgb(61, 106, 255);
+  background: #104489;
   box-shadow: 0 0 30px 5px rgba(0, 142, 236, 0.815);
   -webkit-transition: all 0.2s ease-out;
   -moz-transition: all 0.2s ease-out;
@@ -142,19 +156,24 @@
   display: flex;
   justify-content: center;
   gap: 5rem;
-  .contacts__item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
-    text-decoration: none;
-    width: 150px
-  }
+}
+
+.contacts__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  text-decoration: none;
+  width: 150px
+}
+
+.contacts__item:hover {
+  opacity: 0.8;
 }
 
 .contacts__item i {
   font-size: 1.5rem;
-  color: rgb(61, 106, 255);
+  color: #104489;
 }
 
 .contacts__item span {
@@ -162,17 +181,131 @@
 }
 
 
+/*------------------ABOUT--------------------*/
+.section-about {
+  margin-top: 100px;
+}
 
-//------------------ABOUT--------------------
 .cards {
   display: flex;
   justify-content: space-around;
+  color: #104489;
+}
+
+.cards__title {
+  margin-top: 20px;
+  font-size: 26px;
+}
+
+.cards__description {
+  margin: 20px 0;
+  font-size: 20px;
+  width: 500px;
+}
+
+.cards__btn {
+  font-size: 16px;
+  padding: 20px;
+  background-color: #f8f8ff;
+  color: #104489;
+  border: 2px solid #104489;
+  border-radius: 3px;
+  transition: 0.2s linear;
+}
+
+.cards__btn:hover {
+  background-color: #104489;
+  color: #f8f8ff;
+  cursor: pointer;
 }
 
 .cards__item img {
   width: 500px;
-  height: 800px;
+  aspect-ratio: 1/1.5;
 }
-//------------------MAP--------------------
-//------------------FAQ--------------------
-//------------------FOOTER--------------------
+
+
+
+/*------------------FAQ--------------------*/
+.section_header {
+  color: #333;
+  margin: 30px 0;
+  padding-top: 30px;
+  font-size: 30px;
+}
+
+.accordeon {
+  color: #333;
+  line-height: 1.8;
+  font-size: 20px;
+  padding: 0 0 30px 20px;
+}
+
+.accordeon__header {
+  font-weight: 700;
+  transition: .2s linear;
+  cursor: pointer;
+}
+
+.accordeon__header:hover {
+  color: #104489;
+}
+
+.accordeon__header.active {
+  color: #104489;
+}
+
+.accordeon__content {
+  padding: 10px;
+  display: none;
+}
+
+
+/*------------------FOOTER--------------------*/
+.footer {
+  margin-top: 30px;
+  background-color: #000;;
+  color: #fff;
+}
+
+.container-footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 0;
+}
+
+.map {
+  width: 100%;
+  max-width: 400px;
+}
+
+.footer__title {
+  margin-bottom: 20px;
+  color: #828282;
+}
+
+.footer-contacts__item {
+  margin-bottom: 20px;
+}
+
+.footer-contacts__link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.footer-contacts__link:hover {
+  color: #828282;
+} 
+
+.footer-contacts__link i {
+  min-width: 20px;
+}
+
+.footer-contacts__title {
+  margin-left: 10px;
+}
+
+.footer__logo {
+  width: 100px;
+  margin: 40px auto;
+}

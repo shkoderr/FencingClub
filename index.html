@@ -7,6 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css" />
     <title>BASA Fencing Club</title>
   </head>
   <body>
@@ -15,12 +16,15 @@
       <div class="container">
         <div class="header__inner">
           <div class="logo">
-            <img class="logo" src="./public/images/fencing-duel-svgrepo-com.svg" alt="" />
+            <a href="#">
+              <img class="logo_img" src="assets/images/fencing-duel-svgrepo-com.svg" alt="club logo" />
+            </a>
+            <h2 class="club_name">Фехтовальный клуб "BASA"</h2>
           </div>
           <nav class="menu">
-            <a href="#">О нас</a>
-            <a href="#">Пробное занятие</a>
-            <a href="#">Хобби группа</a>
+            <a class="nav__link" href="html/about.html">О нас</a>
+            <a class="nav__link" href="html/trial-session.html">Пробное занятие</a>
+            <a class="nav__link" href="html/hobby-group.html">Хобби группа</a>
           </nav>
         </div>
       </div>
@@ -34,9 +38,9 @@
         >
 
         <div class="contacts">
-          <a class="contacts__item" href="tel:+995-599-840-654">
+          <a class="contacts__item" href="tel:+995-597-757-512">
             <i class="fa-solid fa-phone"></i>
-            <span>+995-599-840-654</span>
+            <span>+995-597-757-512</span>
           </a>
           <a class="contacts__item" href="https://mail.google.com/mail" target="_blank">
             <i class="fa-solid fa-envelope"></i>
@@ -54,24 +58,159 @@
       </div>
     </section>
 
-    <!-- Ссылки на страницы "О нас" и "Хобби группа" -->
+    <!------------------ABOUT---------------------->
     <section class="section section-about">
       <div class="container">
         <div class="cards">
           <div class="cards__item">
-            <img src="./public/images/AboutUs.jpg" alt="AboutUs" />
+            <img src="assets/images/AboutUs.jpg" alt="AboutUs" />
+            <div class="cards__text">
+              <h3 class="cards__title">О нас</h3>
+              <p class="cards__description">
+                Клуб “BASA” — одна большая семья. У нас дружный интернациональный коллектив спортсменов и тренеров.
+                Любовь к фехтованию — это то, что всех нас объединяет.
+              </p>
+              <a href="html/about.html">
+                <button class="cards__btn">Узнать больше</button>
+              </a>
+            </div>
           </div>
           <div class="cards__item">
-            <img src="./public/images/HobbyGroup.jpg" alt="HobbyGroup" />
+            <img src="assets/images/HobbyGroup.jpg" alt="HobbyGroup" />
+            <div class="cards__text">
+              <h3 class="cards__title">Хобби группа</h3>
+              <p class="cards__description">
+                Найти хобби в новом для себя городе? Запросто! В ноябре 2022 мы запустили новый проект — любительскую
+                группу для взрослых фехтовальщиков.
+              </p>
+              <a href="html/about.html">
+                <button class="cards__btn">Узнать больше</button>
+              </a>
+            </div>
+          </div>
+        </div>
+        <!--cards-->
+      </div>
+      <!--container-->
+    </section>
+
+    <!-- FAQ-раздел -->
+    <section class="section section-questions">
+      <div class="container">
+        <h2 class="section_header">Вопросы и ответы</h2>
+        <div class="accordeon">
+          <div class="accordeon__item">
+            <div class="accordeon__header">
+              Я хочу, чтобы мой ребенок/дети занимались фехтованием. Есть ли у вас детская группа?
+            </div>
+            <div class="accordeon__content">
+              Этот сайт посвящен взрослому проекту. Конечно, у нас в клубе есть детские группы для разных возрастов и
+              замечательные детские тренеры. Пожалуйста, напишите нам личное сообщение или позвоните, чтобы записаться
+              на пробное занятие.
+            </div>
+          </div>
+          <div class="accordeon__item">
+            <div class="accordeon__header">
+              Я не новичок, раньше уже занимался фехтованием. Есть ли в клубе группа для меня?
+            </div>
+            <div class="accordeon__content">
+              Конечно! Приходите, наши опытные тренеры помогут Вам выбрать группу и составить удобную программу для Вас
+              в зависимости от опыта и пожеланий.
+            </div>
+          </div>
+          <div class="accordeon__item">
+            <div class="accordeon__header">Безопасно ли заниматься фехтованием?</div>
+            <div class="accordeon__content">
+              При условии соблюдения техники безопасности фехтование - один из самых неопасных видов спорта. Он менее
+              травматичен чем, например, футбол.
+            </div>
+          </div>
+          <div class="accordeon__item">
+            <div class="accordeon__header">У меня нет фехтовального инвентаря. Нужно ли его покупать?</div>
+            <div class="accordeon__content">
+              Для пробного занятия и первого месяца занятий клуб предоставляет весь необходимый инвентарь. После Вы
+              можете купить инвентарь в магазине клуба или взять его в аренду.
+            </div>
+          </div>
+          <div class="accordeon__item">
+            <div class="accordeon__header">
+              Обязательно ли посещать три занятия в неделю? Отстану ли я от других, если буду ходить реже, чем
+              остальные?
+            </div>
+            <div class="accordeon__content">
+              Нет. В нашем клубе действует абонемент. Можно приходить 3 раза в неделю, а это 12-15 занятий в месяц.
+              Пропущенные занятия всегда можно компенсировать за счет индивидуальных занятий с тренером.
+            </div>
+          </div>
+          <div class="accordeon__item">
+            <div class="accordeon__header">На каком виде оружия можно заниматься?</div>
+            <div class="accordeon__content">В клубе проводятся занятия на трех видах оружия: рапире, шпаге, сабле.</div>
+          </div>
+          <div class="accordeon__item">
+            <div class="accordeon__header">
+              К сожалению, я пока еще плохо говорю по-грузински. Буду ли я понимать тренера?
+            </div>
+            <div class="accordeon__content">
+              Конечно! Наши тренеры прекрасно владеют грузинским, английским и русским языками.
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="section section-map">
-      <div class="container"></div>
-    </section>
+    <!-- Контакты, карта и дублирование навигации по сайту -->
+    <footer class="footer">
+      <div class="container container-footer">
+        <div class="map">
+          <iframe
+            class="map_snippet"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d47636.27978741548!2d44.692631137967716!3d41.73632300140282!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4044733160915359%3A0xe361bca9b8c1ca2e!2zRmVuY2luZyBDbHViIEJBU0EgLSDhg6Thg5Dhg6Dhg5jhg5nhg5Dhg53hg5Hhg5jhg6Eg4YOQ4YOZ4YOQ4YOT4YOU4YOb4YOY4YOQIOGDkeGDkOGDoeGDkA!5e0!3m2!1sru!2sge!4v1679406975912!5m2!1sru!2sge"
+            width="400"
+            height="300"
+            frameborder="0"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
 
-    <script type="module" src="src/js/main.js"></script>
+        <div class="address">
+          <h3 class="footer__title">Адрес</h3>
+          <p>Arena 2, 6 University St, Tbilisi, Georgia</p>
+          <img class="footer__logo" src="assets/images/fencing-symbol-svgrepo-com.svg" alt="" />
+        </div>
+
+        <div class="footer-contacts">
+          <h3 class="footer__title">Связаться с нами</h3>
+          <div class="footer-contacts__item">
+            <a class="footer-contacts__link" href="tel:+995-597-757-512">
+              <i class="fa-solid fa-phone"></i>
+              <span class="footer-contacts__title">+995-597-757-512</span>
+            </a>
+          </div>
+          <div class="footer-contacts__item">
+            <a class="footer-contacts__link" href="https://mail.google.com/mail" target="_blank">
+              <i class="fa-solid fa-envelope"></i>
+              <span class="footer-contacts__title">E-mail</span>
+            </a>
+          </div>
+          <div class="footer-contacts__item">
+            <a class="footer-contacts__link" href="https://www.facebook.com/" target="_blank">
+              <i class="fa-brands fa-facebook-f"></i>
+              <span class="footer-contacts__title">Facebook</span>
+            </a>
+          </div>
+          <div class="footer-contacts__item">
+            <a class="footer-contacts__link" href="https://t.me/beergamottt" target="_blank">
+              <i class="fa-solid fa-paper-plane"></i>
+              <span class="footer-contacts__title">Telegram</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/main.js"></script>
   </body>
 </html>
