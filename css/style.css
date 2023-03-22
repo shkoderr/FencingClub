@@ -164,11 +164,12 @@ body {
   align-items: center;
   gap: 1rem;
   text-decoration: none;
-  width: 150px
+  width: 150px;
+  transition: 0.2s linear;
 }
 
 .contacts__item:hover {
-  opacity: 0.8;
+  text-shadow: rgba(0, 142, 236, 0.815) 1px 0 15px;
 }
 
 .contacts__item i {
@@ -179,7 +180,6 @@ body {
 .contacts__item span {
   color: #333;
 }
-
 
 /*------------------ABOUT--------------------*/
 .section-about {
@@ -204,7 +204,8 @@ body {
 }
 
 .cards__btn {
-  font-size: 16px;
+  font-size: 14px;
+  text-transform: uppercase;
   padding: 20px;
   background-color: #f8f8ff;
   color: #104489;
@@ -224,8 +225,6 @@ body {
   aspect-ratio: 1/1.5;
 }
 
-
-
 /*------------------FAQ--------------------*/
 .section_header {
   color: #333;
@@ -236,23 +235,42 @@ body {
 
 .accordeon {
   color: #333;
-  line-height: 1.8;
+  line-height: 2.2;
   font-size: 20px;
   padding: 0 0 30px 20px;
 }
 
 .accordeon__header {
   font-weight: 700;
-  transition: .2s linear;
+  transition: 0.3s linear;
   cursor: pointer;
 }
 
 .accordeon__header:hover {
   color: #104489;
+
+  animation-name: hover;
+  animation-duration: 0.3s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+}
+
+/* Анимация для демонастрации кликабельности текста */
+@keyframes hover {
+  0% {
+    color: #104489;
+  }
+  100% {
+    color: #104489;
+    text-shadow: rgba(0, 142, 236, 0.815) 1px 0 15px;
+    transform: translate(0px, 2px);
+  }
 }
 
 .accordeon__header.active {
   color: #104489;
+  text-shadow: rgba(0, 142, 236, 0.815) 1px 0 20px;
+  transform: translate(0px, 2px);
 }
 
 .accordeon__content {
@@ -260,11 +278,10 @@ body {
   display: none;
 }
 
-
 /*------------------FOOTER--------------------*/
 .footer {
   margin-top: 30px;
-  background-color: #000;;
+  background-color: #000;
   color: #fff;
 }
 
@@ -295,7 +312,7 @@ body {
 
 .footer-contacts__link:hover {
   color: #828282;
-} 
+}
 
 .footer-contacts__link i {
   min-width: 20px;
