@@ -168,7 +168,7 @@ body {
   transition: 0.2s linear;
 }
 
-.contacts__item:hover {
+.contacts__item:hover i {
   text-shadow: rgba(0, 142, 236, 0.815) 1px 0 15px;
 }
 
@@ -190,6 +190,22 @@ body {
   display: flex;
   justify-content: space-around;
   color: #104489;
+}
+
+.cards__inner {
+  background: #104489;
+  max-height: 750px;
+  transition: 0.2s linear;
+}
+
+.cards__item img {
+  width: 500px;
+  aspect-ratio: 1/1.5;
+  transition: 0.2s linear;
+}
+
+.cards__inner:hover img {
+  opacity: 0.5;
 }
 
 .cards__title {
@@ -220,11 +236,6 @@ body {
   cursor: pointer;
 }
 
-.cards__item img {
-  width: 500px;
-  aspect-ratio: 1/1.5;
-}
-
 /*------------------FAQ--------------------*/
 .section_header {
   color: #333;
@@ -235,7 +246,7 @@ body {
 
 .accordeon {
   color: #333;
-  line-height: 2.2;
+  line-height: 1.8;
   font-size: 20px;
   padding: 0 0 30px 20px;
 }
@@ -248,23 +259,8 @@ body {
 
 .accordeon__header:hover {
   color: #104489;
-
-  animation-name: hover;
-  animation-duration: 0.3s;
-  animation-timing-function: ease-out;
-  animation-fill-mode: forwards;
-}
-
-/* Анимация для демонастрации кликабельности текста */
-@keyframes hover {
-  0% {
-    color: #104489;
-  }
-  100% {
-    color: #104489;
-    text-shadow: rgba(0, 142, 236, 0.815) 1px 0 15px;
-    transform: translate(0px, 2px);
-  }
+  text-shadow: rgba(0, 142, 236, 0.815) 1px 0 15px;
+  transform: translate(0px, 2px);
 }
 
 .accordeon__header.active {
@@ -275,7 +271,9 @@ body {
 
 .accordeon__content {
   padding: 10px;
-  display: none;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease-in-out;
 }
 
 /*------------------FOOTER--------------------*/
