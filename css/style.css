@@ -1,3 +1,5 @@
+/* -------------COMMON STYLES------------- */
+
 *,
 *:before,
 *:after {
@@ -65,6 +67,7 @@ body {
   margin-top: 40px;
   width: 400px;
   text-align: center;
+  font-size: 30px;
   font-weight: 500;
 }
 
@@ -87,6 +90,59 @@ body {
   color: #104489;
   text-shadow: rgba(0, 142, 236, 0.815) 1px 0 20px;
 }
+
+
+/*------------------FOOTER--------------------*/
+.footer {
+  margin-top: 30px;
+  background-color: #000;
+  color: #fff;
+}
+
+.container-footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 0;
+}
+
+.map {
+  width: 100%;
+  max-width: 400px;
+}
+
+.footer__title {
+  margin-bottom: 20px;
+  color: #828282;
+}
+
+.footer-contacts__item {
+  margin-bottom: 20px;
+}
+
+.footer-contacts__link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.footer-contacts__link:hover {
+  color: #828282;
+}
+
+.footer-contacts__link i {
+  min-width: 20px;
+}
+
+.footer-contacts__title {
+  margin-left: 10px;
+}
+
+.footer__logo {
+  width: 100px;
+  margin: 40px auto;
+}
+
+
+/*------------------HOME PAGE--------------------*/
 
 /*------------------SIGN--------------------*/
 .container-sign {
@@ -286,51 +342,63 @@ body {
   transition: max-height 0.4s ease-in-out;
 }
 
-/*------------------FOOTER--------------------*/
-.footer {
-  margin-top: 30px;
-  background-color: #000;
-  color: #fff;
+
+
+/*------------------ABOUT PAGE--------------------*/
+
+/* -----------------SECTIONS--------------------- */
+.section-about {
+  position: relative;
+  margin-bottom: 100px;
+  color: #f8f8ff;
+}
+/*------------------ABOUT TEXT--------------------*/
+.about-header {
+  padding-top: 50px;
+  text-align: center;
+  text-transform: uppercase;
 }
 
-.container-footer {
-  display: flex;
-  justify-content: space-between;
-  padding: 30px 0;
+.about-text {
+  padding: 16px;
+  margin-top: 20px;
+  font-size: 24px;
+  line-height: 1.5;
 }
 
-.map {
+.about-text__item {
+  margin: 20px 0;
+}
+
+.about-text__item:last-child {
+  margin-top: 100px;
+}
+
+.section-about__img {
+  position: absolute;
+  left: 0;
+  top: 0;
   width: 100%;
-  max-width: 400px;
+  z-index: -1000;
 }
 
-.footer__title {
-  margin-bottom: 20px;
-  color: #828282;
-}
-
-.footer-contacts__item {
-  margin-bottom: 20px;
-}
-
-.footer-contacts__link {
+.about__link {
   text-decoration: none;
-  color: inherit;
+  color: #f8f8ff;
+  font-size: 1.7rem;
+  width: 300px;
+  text-align: center;
+  transition: 0.3s linear;
 }
 
-.footer-contacts__link:hover {
-  color: #828282;
+
+.about__link:hover {
+  color: #104489;
+  text-shadow: rgba(0, 142, 236, 0.815) 1px 0 20px;
 }
 
-.footer-contacts__link i {
-  min-width: 20px;
-}
+/*------------------SLIDER SECTION--------------------*/
 
-.footer-contacts__title {
-  margin-left: 10px;
-}
-
-.footer__logo {
-  width: 100px;
-  margin: 40px auto;
+.section-slider {
+  margin-top: 400px;
 }

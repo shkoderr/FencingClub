@@ -13,7 +13,11 @@
   <body>
     <!-- Логотип и навигация по сайту -->
     <header class="header">
-      <img class="header__img" src="../assets/images/pexels-artem-podrez-5941996.jpg" alt="Изображение фехтовальщиков">
+      <img
+        class="header__img"
+        src="../assets/images/pexels-artem-podrez-5941996.jpg"
+        alt="Изображение фехтовальщиков"
+      />
       <div class="container">
         <div class="header__inner">
           <div class="logo">
@@ -32,8 +36,74 @@
     </header>
 
     <main class="main">
-      <section>
-        <h1 style="text-align: center; color: #333">Здесь будет страница "О нас"</h1>
+      <section class="section section-sign">
+        <div class="container container-sign">
+          <a href="https://mail.google.com/mail" target="_blank"
+            ><button class="submit-btn" type="submit">Записаться на занятие</button></a
+          >
+
+          <div class="contacts">
+            <a class="contacts__item" href="tel:+995-597-757-512">
+              <i class="fa-solid fa-phone"></i>
+              <span>+995-597-757-512</span>
+            </a>
+            <a class="contacts__item" href="https://mail.google.com/mail" target="_blank">
+              <i class="fa-solid fa-envelope"></i>
+              <span>Почта</span>
+            </a>
+            <a class="contacts__item" href="https://www.facebook.com/" target="_blank">
+              <i class="fa-brands fa-facebook-f"></i>
+              <span>Facebook</span>
+            </a>
+            <a class="contacts__item" href="https://t.me/beergamottt" target="_blank">
+              <i class="fa-solid fa-paper-plane"></i>
+              <span>Telegram</span>
+            </a>
+          </div>
+        </div>
+      </section>
+      <!-- Описание деятельности клуба -->
+      <section class="section section-about">
+        <div class="container">
+          <img
+            class="section-about__img"
+            src="../assets/images/image_for_aboutpage.jpg"
+            alt="Изображение двух фехтовальщиков"
+          />
+          <h1 class="about-header">О нашем клубе</h1>
+          <article class="about-text">
+            <p class="about-text__item">
+              Клуб “BASA” — одна большая семья. У нас дружный интернациональный коллектив спортсменов и тренеров.
+            </p>
+            <p class="about-text__item">
+              Любовь к фехтованию — это то, что всех нас объединяет. Мы вместе тренируемся и принимаем участие в
+              соревнованиях, вместе путешествуем, вместе отмечаем дни рождения и другие праздники.
+            </p>
+            <p class="about-text__item">
+              Наши спортсмены — дети, юниоры, взрослые и ветераны — регулярно выступают и занимают призовые места на
+              локальных и международных соревнованиях.
+            </p>
+            <p class="about-text__item">
+              В ноябре 2022 мы приняли решение запустить любительский проект — группу для экспатов и резидентов в поиске
+              хобби в Тбилиси, которые хотят начать заниматься фехтованием с нуля (подробнее в разделе
+              <a class="about__link" href="hobby-group.html">«Хобби-группа»</a>).
+            </p>
+            <p class="about-text__item">
+              Мы находимся на
+              <a class="about__link" target="_blank" href="https://goo.gl/maps/hyeBAjC6tJSG4Ldj6"
+                >Арене 2 в Сабуртало (Университетская улица, д.6, 3 этаж).</a
+              >
+              Будем рады видеть Вас на наших занятиях! Уверены, Вы тоже полюбите фехтование так же, как любим этот
+              прекрасный вид спорта мы.
+            </p>
+            <p class="about-text__item">Ваш клуб “BASA”</p>
+          </article>
+        </div>
+      </section>
+
+      <!-- Секция с фото-слайдером -->
+      <section class="section section-slider">
+        <div class="container" style="text-align: center; font-size: 30px; margin-bottom: 50px;">Здесь завтра буду слайдер с фотками делать</div>
       </section>
     </main>
 
