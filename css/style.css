@@ -7,18 +7,37 @@
 }
 
 body {
+  font-family: 'Open Sans', sans-serif;
   background-color: #f8f8ff;
 }
 
 .container {
-  font-family: 'Open Sans', sans-serif;
   width: 100%;
   max-width: 1230px;
   padding: 0 15px;
   margin: 0 auto;
 }
 
+/*------------------SECTIONS--------------------*/
+.section_header {
+  color: #333;
+  margin: 30px 0;
+  padding-top: 30px;
+  font-size: 30px;
+}
+
+.section-about {
+  margin-top: 200px;
+}
+
 /*------------------HEADER--------------------*/
+.header__img {
+  width: 100%;
+  position: absolute;
+  z-index: -1000;
+  opacity: 0.2;
+}
+
 .header__inner {
   display: flex;
   flex-direction: column;
@@ -27,13 +46,14 @@ body {
   gap: 10vh;
   width: 100%;
   height: 60vh;
-  margin: 3rem 0;
+  margin-bottom: 3rem;
 }
 
 .logo {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 3rem;
 }
 
 .logo_img {
@@ -60,10 +80,12 @@ body {
   font-size: 1.7rem;
   width: 300px;
   text-align: center;
+  transition: 0.3s linear;
 }
 
 .nav__link:hover {
   color: #104489;
+  text-shadow: rgba(0, 142, 236, 0.815) 1px 0 20px;
 }
 
 /*------------------SIGN--------------------*/
@@ -73,7 +95,6 @@ body {
   justify-content: center;
   align-items: center;
   gap: 3rem;
-  margin-bottom: 50px;
 }
 
 .submit-btn {
@@ -165,16 +186,16 @@ body {
   gap: 1rem;
   text-decoration: none;
   width: 150px;
-  transition: 0.2s linear;
-}
-
-.contacts__item:hover i {
-  text-shadow: rgba(0, 142, 236, 0.815) 1px 0 15px;
 }
 
 .contacts__item i {
   font-size: 1.5rem;
   color: #104489;
+  transition: 0.3s linear;
+}
+
+.contacts__item:hover i {
+  text-shadow: rgba(0, 142, 236, 0.815) 1px 0 15px;
 }
 
 .contacts__item span {
@@ -182,10 +203,6 @@ body {
 }
 
 /*------------------ABOUT--------------------*/
-.section-about {
-  margin-top: 100px;
-}
-
 .cards {
   display: flex;
   justify-content: space-around;
@@ -237,13 +254,6 @@ body {
 }
 
 /*------------------FAQ--------------------*/
-.section_header {
-  color: #333;
-  margin: 30px 0;
-  padding-top: 30px;
-  font-size: 30px;
-}
-
 .accordeon {
   color: #333;
   line-height: 1.8;
