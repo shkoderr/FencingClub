@@ -1,4 +1,3 @@
-'use strict'
 //Объявляем переменные:
 const headers = document.querySelectorAll('.accordeon__header')
 
@@ -28,3 +27,38 @@ function showContent() {
     accordeonContent.style.maxHeight = accordeonContent.scrollHeight + 'px'
   }
 }
+
+//----------------SLIDER--------------------
+$('.slider').slick({
+  dots: true,
+  infinite: false,
+  speed: 200,
+  slidesToShow: 2,
+  slidesToScroll: 1,
+  responsive: [
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 1,
+        infinite: true,
+        dots: true
+      }
+    },
+    {
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    }
+  ]
+});
+	

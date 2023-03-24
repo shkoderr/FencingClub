@@ -91,7 +91,6 @@ body {
   text-shadow: rgba(0, 142, 236, 0.815) 1px 0 20px;
 }
 
-
 /*------------------FOOTER--------------------*/
 .footer {
   margin-top: 30px;
@@ -140,7 +139,6 @@ body {
   width: 100px;
   margin: 40px auto;
 }
-
 
 /*------------------HOME PAGE--------------------*/
 
@@ -342,15 +340,16 @@ body {
   transition: max-height 0.4s ease-in-out;
 }
 
-
-
 /*------------------ABOUT PAGE--------------------*/
 
 /* -----------------SECTIONS--------------------- */
-.section-about {
-  position: relative;
-  margin-bottom: 100px;
+.section-page-about {
+  margin: 200px auto 100px;
   color: #f8f8ff;
+  background-image: url(../assets/images/image_for_aboutpage2.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 /*------------------ABOUT TEXT--------------------*/
 .about-header {
@@ -360,45 +359,40 @@ body {
 }
 
 .about-text {
-  padding: 16px;
+  padding: 0 16px 400px;
   margin-top: 20px;
-  font-size: 24px;
+  font-size: 20px;
   line-height: 1.5;
 }
 
 .about-text__item {
-  margin: 20px 0;
-}
-
-.about-text__item:last-child {
-  margin-top: 100px;
-}
-
-.section-about__img {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  z-index: -1000;
+  margin: 30px 10px;
 }
 
 .about__link {
   text-decoration: none;
-  color: #f8f8ff;
-  font-size: 1.7rem;
-  width: 300px;
+  color: rgb(0, 142, 236);
   text-align: center;
-  transition: 0.3s linear;
+  transition: 0.2s linear;
 }
-
 
 .about__link:hover {
-  color: #104489;
-  text-shadow: rgba(0, 142, 236, 0.815) 1px 0 20px;
+  text-decoration: underline;
+  color: rgb(0, 142, 236);
+  text-shadow: rgba(0, 142, 236, 1) 3px 0 20px;
 }
 
-/*------------------SLIDER SECTION--------------------*/
+/*--------------SLIDER SECTION----------------*/
 
 .section-slider {
-  margin-top: 400px;
+  margin: 200px auto;
 }
+
+.slider img {
+  max-width: 600px;
+}
+
+
+
+
+
