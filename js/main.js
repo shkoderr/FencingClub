@@ -29,6 +29,7 @@ function showContent() {
 }
 
 //----------------SLIDER--------------------
+
 $('.slider').slick({
   dots: true,
   infinite: false,
