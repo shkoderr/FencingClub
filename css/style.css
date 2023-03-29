@@ -20,14 +20,15 @@ body {
   margin: 0 auto;
 }
 
-/*------------------SECTIONS--------------------*/
-.section_header {
-  color: #333;
-  margin: 30px 0;
-  padding-top: 30px;
-  font-size: 30px;
+.section-header {
+  text-align: center;
+  margin: 40px auto;
+  font-size: 28px;
+  font-weight: 700;
+
 }
 
+/*------------------SECTIONS--------------------*/
 .section-about {
   margin-top: 200px;
 }
@@ -307,7 +308,14 @@ body {
   cursor: pointer;
 }
 
-/*------------------FAQ--------------------*/
+/*--------------QUESTIONS--------------*/
+.question_header {
+  color: #333;
+  margin: 30px 0;
+  padding-top: 30px;
+  font-size: 30px;
+}
+
 .accordeon {
   color: #333;
   line-height: 1.8;
@@ -385,5 +393,59 @@ body {
 /*--------------SLIDER SECTION----------------*/
 
 .section-slider {
-  margin: 200px auto;
+  margin: 100px auto;
+}
+
+
+/* TRIAL-SESSION PAGE */
+.section-trial {
+  margin: 100px 0;
+}
+
+
+
+/* ------------HOBBY-GROUP PAGE------------- */
+.section-hobby {
+  margin: 100px 0;
+}
+
+.hobby-text {
+  font-size: 20px;
+}
+
+.benefits__list {
+  padding-left: 50px;
+  line-height: 2; 
+}
+
+.hobby-group {
+  margin-top: 100px;
+}
+
+.about-text__item {
+  line-height: 1.8;
+}
+
+/* Программы занятий */
+
+.programs {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.programs__item {
+  margin-bottom: 50px;
+  flex: 50%;
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+.programs__item-img {
+  width: 200px;
+  height: 200px;
+}
+
+.programs__item-title {
+  font-size: 24px;
 }
