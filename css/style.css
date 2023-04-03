@@ -428,11 +428,6 @@ body {
 
 /* Программы занятий */
 
-.programs {
-  display: flex;
-  flex-wrap: wrap;
-}
-
 .programs__item {
   margin-bottom: 50px;
   flex: 50%;
@@ -448,4 +443,23 @@ body {
 
 .programs__item-title {
   font-size: 24px;
+}
+
+/* Запись на индивидуальные занятия */
+.submit__personal {
+  display: flex;
+  justify-content: center;
+  margin: 80px auto 0;
+  width: 300px;
+}
+
+.submit-btn-personal {
+  background: #38d37e;
+  border: 1px solid #38d37e;
+}
+
+.submit-btn-personal:hover {
+  background: #38d37e;
+  border: 1px solid #38d37e;
+  box-shadow: 0 0 30px 5px #38d37e;
 }
