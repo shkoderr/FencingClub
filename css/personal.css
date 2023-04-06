@@ -1,0 +1,39 @@
+.menu-personal {
+  align-self: flex-start;
+}
+
+.nav__link.nav__link-personal {
+  position: relative;
+  font-size: 20px;
+}
+
+.nav__link.nav__link-personal::before {
+  content: "";
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 10px 25px 10px 0;
+  border-color: transparent #104489;  position: absolute;
+  z-index: 1000;
+  inset: 6px -35px;
+}
+
+.personal {
+  margin: 50px 0 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+
+.personal__image {
+  width: 20rem;
+  height: auto;
+}
+
+.personal__text {
+  flex: 0.7;
+  font-size: 20px;
+  list-style: square;
+}
+

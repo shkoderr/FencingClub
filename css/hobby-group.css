@@ -1,0 +1,52 @@
+.section-hobby {
+  margin: 100px 0;
+}
+
+.hobby-text {
+  font-size: 20px;
+}
+
+.benefits__list {
+  padding-left: 50px;
+  line-height: 2; 
+}
+
+.hobby-group {
+  margin-top: 100px;
+}
+
+.about-text__item {
+  line-height: 1.8;
+}
+
+/* Программы занятий */
+
+.programs__item {
+  margin-bottom: 50px;
+  flex: 50%;
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+.programs__item-img {
+  width: 200px;
+  height: 200px;
+}
+
+.programs__item-title {
+  font-size: 24px;
+}
+
+/* Запись на индивидуальные занятия */
+.submit__personal {
+  display: flex;
+  justify-content: center;
+  margin: 80px auto 0;
+  width: 300px;
+}
+
+.personal-prompt {
+  margin: 50px 0 -50px;
+  text-align: center;
+}

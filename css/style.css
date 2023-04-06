@@ -1,4 +1,9 @@
-/* -------------COMMON STYLES------------- */
+/* Импортируем таблицы стилей */
+@import url('./personal.css');
+@import url('./hobby-group.css');
+
+
+/* ----COMMON STYLES---- */
 
 *,
 *:before,
@@ -25,7 +30,6 @@ body {
   margin: 40px auto;
   font-size: 28px;
   font-weight: 700;
-
 }
 
 /*------------------SECTIONS--------------------*/
@@ -92,6 +96,10 @@ body {
   text-shadow: rgba(0, 142, 236, 0.815) 1px 0 20px;
 }
 
+.price {
+  font-weight: 800;
+}
+
 /*------------------FOOTER--------------------*/
 .footer {
   margin-top: 30px;
@@ -125,7 +133,7 @@ body {
 }
 
 .footer-contacts__link:hover {
-  color: #828282;
+  color: #104489;
 }
 
 .footer-contacts__link i {
@@ -255,6 +263,19 @@ body {
 
 .contacts__item span {
   color: #333;
+}
+
+/* Кнопка перехода на индивидуальные уроки */
+
+.submit-btn-personal {
+  background: #38d37e;
+  border: 1px solid #38d37e;
+}
+
+.submit-btn-personal:hover {
+  background: #38d37e;
+  border: 1px solid #38d37e;
+  box-shadow: 0 0 30px 5px #38d37e;
 }
 
 /*------------------ABOUT--------------------*/
@@ -396,70 +417,7 @@ body {
   margin: 100px auto;
 }
 
-
 /* TRIAL-SESSION PAGE */
 .section-trial {
   margin: 100px 0;
-}
-
-
-
-/* ------------HOBBY-GROUP PAGE------------- */
-.section-hobby {
-  margin: 100px 0;
-}
-
-.hobby-text {
-  font-size: 20px;
-}
-
-.benefits__list {
-  padding-left: 50px;
-  line-height: 2; 
-}
-
-.hobby-group {
-  margin-top: 100px;
-}
-
-.about-text__item {
-  line-height: 1.8;
-}
-
-/* Программы занятий */
-
-.programs__item {
-  margin-bottom: 50px;
-  flex: 50%;
-  display: flex;
-  gap: 30px;
-  align-items: center;
-}
-
-.programs__item-img {
-  width: 200px;
-  height: 200px;
-}
-
-.programs__item-title {
-  font-size: 24px;
-}
-
-/* Запись на индивидуальные занятия */
-.submit__personal {
-  display: flex;
-  justify-content: center;
-  margin: 80px auto 0;
-  width: 300px;
-}
-
-.submit-btn-personal {
-  background: #38d37e;
-  border: 1px solid #38d37e;
-}
-
-.submit-btn-personal:hover {
-  background: #38d37e;
-  border: 1px solid #38d37e;
-  box-shadow: 0 0 30px 5px #38d37e;
 }
