@@ -31,33 +31,28 @@ function showContent() {
 //------SLIDER------
 
 $('.slider').slick({
+  arrows: false,
   dots: true,
-  infinite: true,
-  speed: 200,
-  slidesToShow: 2,
-  slidesToScroll: 1,
+  autoplay: true,
+  autoplaySpeed: 2000,
+  slidesToShow: 3,
   responsive: [
     {
-      breakpoint: 1024,
+      breakpoint: 768,
       settings: {
-        slidesToShow: 2,
-        slidesToScroll: 1,
-        infinite: true,
-        dots: true
-      }
-    },
-    {
-      breakpoint: 600,
-      settings: {
-        slidesToShow: 1,
-        slidesToScroll: 1
+        arrows: false,
+        centerMode: true,
+        centerPadding: '40px',
+        slidesToShow: 3
       }
     },
     {
       breakpoint: 480,
       settings: {
-        slidesToShow: 1,
-        slidesToScroll: 1
+        arrows: false,
+        centerMode: true,
+        centerPadding: '40px',
+        slidesToShow: 1
       }
     }
   ]

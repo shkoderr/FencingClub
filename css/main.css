@@ -284,6 +284,7 @@ body {
 .slider__img {
   width: 400px;
   height: auto;
+  margin-right: 20px;
   aspect-ratio: 3/2;
-  overflow: hidden;
+  /*margin-right: 20px;*/
 }
