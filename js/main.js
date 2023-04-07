@@ -28,11 +28,11 @@ function showContent() {
   }
 }
 
-//----------------SLIDER--------------------
+//------SLIDER------
 
 $('.slider').slick({
   dots: true,
-  infinite: false,
+  infinite: true,
   speed: 200,
   slidesToShow: 2,
   slidesToScroll: 1,

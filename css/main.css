@@ -1,10 +1,11 @@
-/* Импортируем таблицы стилей */
 @import url('./personal.css');
 @import url('./hobby-group.css');
+@import url('./about.css');
+@import url('./home-page.css');
+@import url('./trial-page.css');
 
 
 /* ----COMMON STYLES---- */
-
 *,
 *:before,
 *:after {
@@ -25,6 +26,8 @@ body {
   margin: 0 auto;
 }
 
+
+/*-------HEADER-------*/
 .section-header {
   text-align: center;
   margin: 40px auto;
@@ -32,12 +35,6 @@ body {
   font-weight: 700;
 }
 
-/*------------------SECTIONS--------------------*/
-.section-about {
-  margin-top: 200px;
-}
-
-/*------------------HEADER--------------------*/
 .header__img {
   width: 100%;
   position: absolute;
@@ -96,13 +93,48 @@ body {
   text-shadow: rgba(0, 142, 236, 0.815) 1px 0 20px;
 }
 
-.price {
-  font-weight: 800;
+.container-sign {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  margin-bottom: 100px;
 }
 
-/*------------------FOOTER--------------------*/
+.contacts {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 5rem;
+}
+
+.contacts__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  text-decoration: none;
+  width: 150px;
+}
+
+.contacts__item i {
+  font-size: 1.5rem;
+  color: #104489;
+  transition: 0.3s linear;
+}
+
+.contacts__item:hover i {
+  text-shadow: rgba(0, 142, 236, 0.815) 1px 0 15px;
+}
+
+.contacts__item span {
+  color: #333;
+}
+
+/*---------FOOTER---------*/
 .footer {
-  margin-top: 30px;
+  margin-top: 100px;
   background-color: #000;
   color: #fff;
 }
@@ -149,20 +181,11 @@ body {
   margin: 40px auto;
 }
 
-/*------------------HOME PAGE--------------------*/
 
-/*------------------SIGN--------------------*/
-.container-sign {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 3rem;
-}
-
+/* -----BUTTONS----- */
 .submit-btn {
   position: relative;
-  padding: 16px;
+  padding: 12px;
   border-radius: 7px;
   border: 1px solid #104489;
   font-size: 14px;
@@ -235,39 +258,8 @@ body {
   transition: box-shadow 0.2s ease-in;
 }
 
-.contacts {
-  margin-top: 20px;
-  display: flex;
-  justify-content: center;
-  gap: 5rem;
-}
-
-.contacts__item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1rem;
-  text-decoration: none;
-  width: 150px;
-}
-
-.contacts__item i {
-  font-size: 1.5rem;
-  color: #104489;
-  transition: 0.3s linear;
-}
-
-.contacts__item:hover i {
-  text-shadow: rgba(0, 142, 236, 0.815) 1px 0 15px;
-}
-
-.contacts__item span {
-  color: #333;
-}
-
-/* Кнопка перехода на индивидуальные уроки */
-
 .submit-btn-personal {
+  padding: 20px;
   background: #38d37e;
   border: 1px solid #38d37e;
 }
@@ -278,146 +270,20 @@ body {
   box-shadow: 0 0 30px 5px #38d37e;
 }
 
-/*------------------ABOUT--------------------*/
-.cards {
-  display: flex;
-  justify-content: space-around;
-  color: #104489;
+.price {
+  font-weight: 800;
+  font-size: 17px;
 }
 
-.cards__inner {
-  background: #104489;
-  max-height: 750px;
-  transition: 0.2s linear;
-}
 
-.cards__item img {
-  width: 500px;
-  aspect-ratio: 1/1.5;
-  transition: 0.2s linear;
-}
-
-.cards__inner:hover img {
-  opacity: 0.5;
-}
-
-.cards__title {
-  margin-top: 20px;
-  font-size: 26px;
-}
-
-.cards__description {
-  margin: 20px 0;
-  font-size: 20px;
-  width: 500px;
-}
-
-.cards__btn {
-  font-size: 14px;
-  text-transform: uppercase;
-  padding: 20px;
-  background-color: #f8f8ff;
-  color: #104489;
-  border: 2px solid #104489;
-  border-radius: 3px;
-  transition: 0.2s linear;
-}
-
-.cards__btn:hover {
-  background-color: #104489;
-  color: #f8f8ff;
-  cursor: pointer;
-}
-
-/*--------------QUESTIONS--------------*/
-.question_header {
-  color: #333;
-  margin: 30px 0;
-  padding-top: 30px;
-  font-size: 30px;
-}
-
-.accordeon {
-  color: #333;
-  line-height: 1.8;
-  font-size: 20px;
-  padding: 0 0 30px 20px;
-}
-
-.accordeon__header {
-  font-weight: 700;
-  transition: 0.3s linear;
-  cursor: pointer;
-}
-
-.accordeon__header:hover {
-  color: #104489;
-  text-shadow: rgba(0, 142, 236, 0.815) 1px 0 15px;
-  transform: translate(0px, 2px);
-}
-
-.accordeon__header.active {
-  color: #104489;
-  text-shadow: rgba(0, 142, 236, 0.815) 1px 0 20px;
-  transform: translate(0px, 2px);
-}
-
-.accordeon__content {
-  padding: 10px;
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.4s ease-in-out;
-}
-
-/*------------------ABOUT PAGE--------------------*/
-
-/* -----------------SECTIONS--------------------- */
-.section-page-about {
-  margin: 200px auto 100px;
-  color: #f8f8ff;
-  background-image: url(../assets/images/image_for_aboutpage2.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-/*------------------ABOUT TEXT--------------------*/
-.about-header {
-  padding-top: 50px;
-  text-align: center;
-  text-transform: uppercase;
-}
-
-.about-text {
-  padding: 0 16px 400px;
-  margin-top: 20px;
-  font-size: 20px;
-  line-height: 1.5;
-}
-
-.about-text__item {
-  margin: 30px 10px;
-}
-
-.about__link {
-  text-decoration: none;
-  color: rgb(0, 142, 236);
-  text-align: center;
-  transition: 0.2s linear;
-}
-
-.about__link:hover {
-  text-decoration: underline;
-  color: rgb(0, 142, 236);
-  text-shadow: rgba(0, 142, 236, 1) 3px 0 20px;
-}
-
-/*--------------SLIDER SECTION----------------*/
-
+/* -------SlIDER------- */
 .section-slider {
   margin: 100px auto;
 }
 
-/* TRIAL-SESSION PAGE */
-.section-trial {
-  margin: 100px 0;
+.slider__img {
+  width: 400px;
+  height: auto;
+  aspect-ratio: 3/2;
+  overflow: hidden;
 }
