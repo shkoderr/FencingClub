@@ -50,7 +50,7 @@ body {
   gap: 10vh;
   width: 100%;
   height: 60vh;
-  margin-bottom: 3rem;
+  margin-bottom: 5rem;
 }
 
 .logo {
@@ -61,12 +61,12 @@ body {
 }
 
 .logo_img {
-  width: 200px;
+  padding-right: 4rem;
+  width: 400px;
   height: auto;
 }
 
 .club_name {
-  margin-top: 40px;
   width: 400px;
   text-align: center;
   font-size: 30px;
