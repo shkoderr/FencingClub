@@ -87,3 +87,26 @@
   overflow: hidden;
   transition: max-height 0.4s ease-in-out;
 }
+
+
+/* ----- ADAPTIVE LAYOUT ----- */
+
+@media (max-width: 1230px) {
+  /* Cards */
+  .cards__inner {
+    width: 400px;
+  }
+  .cards__item img {
+    width: 400px;
+    aspect-ratio: 1/1.5;
+  }
+
+  .cards__item {
+    width: 400px;
+  }
+
+  .cards__description {
+    width: 400px;
+  }
+
+}

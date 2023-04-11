@@ -288,3 +288,27 @@ body {
   aspect-ratio: 3/2;
   /*margin-right: 20px;*/
 }
+
+
+
+/* ----- ADAPTIVE LAYOUT ----- */
+@media (max-width: 1230px) {
+  /* HEADER */
+  .menu {
+    gap: 5rem;
+  }
+
+  /* FOOTER */
+  .container-footer {
+    gap: 2rem;
+  }
+
+  .map {
+    max-width: 250px;
+  }
+
+  iframe {
+    max-width: 250px;
+    max-height: 250px;
+  }
+}
