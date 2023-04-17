@@ -30,31 +30,50 @@ function showContent() {
 
 //------SLIDER------
 
-$('.slider').slick({
-  arrows: false,
-  dots: true,
-  autoplay: true,
-  autoplaySpeed: 2000,
-  slidesToShow: 3,
-  responsive: [
-    {
-      breakpoint: 768,
-      settings: {
-        arrows: false,
-        centerMode: true,
-        centerPadding: '40px',
-        slidesToShow: 3
-      }
+const swiper = new Swiper('.swiper', {
+  spaceBetween: 30,
+  slidesPerView: 3,
+  centeredSlides: true,
+  grabCursor: true,
+  direction: 'horizontal',
+  loop: true,
+  centeredSlide: true,
+
+  autoplay: {
+    delay: 2000,
+    disableOnInteraction: false
+  },
+
+  pagination: {
+    el: '.swiper-pagination',
+    dynamicBullets: true,
+    clickable: true,
+  },
+
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+
+  keyboard: {
+    enabled: true,
+    onlyInViewport: true,
+  },
+
+  breakpoints: {
+    1024: {
+      spaceBetween: 30,
+      slidesPerView: 3
     },
-    {
-      breakpoint: 480,
-      settings: {
-        arrows: false,
-        centerMode: true,
-        centerPadding: '40px',
-        slidesToShow: 1
-      }
+     
+    768: {
+      slidesPerView: 2,
+      spaceBetween: 25
+    },
+
+    520: {
+      slidesPerView: 1,
+      spaceBetween: 25
     }
-  ]
+  }
 });
-	
