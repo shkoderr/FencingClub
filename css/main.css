@@ -352,12 +352,20 @@ body {
 
 @media (max-width: 768px) {
   /* HEADER */
+  .header__inner {
+    margin-bottom: 6rem;
+  }
+
+  .logo_img {
+    width: 17em;
+  }
+
   .menu {
     gap: 1.5rem;
   }
 
   .nav__link {
-    font-size: 1.1rem;
+    font-size: 1.1em;
     width: 175px;
   }
 
@@ -416,7 +424,7 @@ body {
   }
 
   .nav__link {
-    font-size: 14px;
+    font-size: 1em;
   }
 
   .submit-btn {

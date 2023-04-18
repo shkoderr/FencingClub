@@ -57,10 +57,24 @@
   .hobby-text {
     font-size: 1em;
   }
+
+  .personal-prompt {
+    font-size: 1.5em;
+  }
+}
+
+@media(max-width: 575px) {
+  .personal-prompt {
+    font-size: 1.3em;
+  }
 }
 
 @media(max-width: 375px) {
   .hobby-text {
-    font-size: 0.9em;
+    font-size: 1em;
+  }
+
+  .personal-prompt {
+    font-size: 1.2em;
   }
 }
