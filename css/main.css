@@ -30,7 +30,7 @@ body {
 /*-------HEADER-------*/
 .section-header {
   text-align: center;
-  margin: 40px auto;
+  margin: 0 auto 40px;
   font-size: 28px;
   font-weight: 700;
 }
@@ -61,8 +61,8 @@ body {
 }
 
 .logo_img {
-  padding-right: 4rem;
-  width: 400px;
+  padding-right: 4em;
+  width: 20em;
   height: auto;
 }
 
@@ -303,6 +303,11 @@ body {
     gap: 5rem;
   }
 
+  .nav__link {
+    font-size: 1.4rem;
+    width: 200px;
+  }
+
   /* FOOTER */
   .container-footer {
     gap: 2rem;
@@ -314,20 +319,10 @@ body {
   }
 }
 
-@media (max-width: 1100px) {
+@media (max-width: 990px) {
 
   .contacts {
     gap: 2rem;
-  }
-
-  .nav__link {
-    font-size: 1.3rem;
-    width: 190px;
-  }
-
-  .submit-btn {
-    font-size: 10px;
-    padding: 12px;
   }
 
   .container-sign {
@@ -351,13 +346,12 @@ body {
     font-size: 14px;
   }
 
-  .map {
-    order: 2;
-  }
+  
 
 }
 
 @media (max-width: 768px) {
+  /* HEADER */
   .menu {
     gap: 1.5rem;
   }
@@ -383,15 +377,74 @@ body {
     font-size: 14px;
   }
 
+  .section-header {
+    font-size: 25px;
+  }
+
+  .submit-btn {
+    font-size: 12px;
+    padding: 10px;
+  }
+
+  .submit-btn-personal {
+    padding: 18px;
+    font-size: 14px;
+  }
+
   /* FOOTER */
   .container-footer {
     justify-content: space-evenly;
   }
 
+  .map {
+    order: 2;
+  }
   
 }
 
 @media(max-width: 575px) {
+  /* HEADER */
+  .club_name {
+    font-size: 1.5em;
+    width: 300px;
+  }
+
+  .menu {
+    flex-direction: column;
+    gap: 0.7em;
+    margin-bottom: 2em;
+  }
+
+  .nav__link {
+    font-size: 14px;
+  }
+
+  .submit-btn {
+    margin-top: 2em;
+    padding: 8px;
+  }
+
+  .submit-btn-personal {
+    padding: 15px;
+    font-size: 14px;
+  }
+
+  .price {
+    font-size: 14px;
+  }
+
+  .section-header {
+    font-size: 20px;
+  }
+
+  /* CONTACTS */
+  .contacts {
+    flex-direction: column;
+  }
+
+  .container-sign {
+    margin-bottom: 75px;
+  }
 
   /* FOOTER */
   .container-footer {

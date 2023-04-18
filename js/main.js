@@ -4,7 +4,7 @@ const headers = document.querySelectorAll('.accordeon__header')
 //Описываем функционал:
 for (let i = 0; i < headers.length; i++) {
   headers[i].addEventListener('click', showContent)
-  headers[i].addEventListener('touchstart', showContent)
+  headers[i].addEventListener('touch', showContent)
 }
 
 //Показываем ответ, изменяя высоту контента:
@@ -31,13 +31,11 @@ function showContent() {
 //------SLIDER------
 
 const swiper = new Swiper('.swiper', {
-  spaceBetween: 30,
-  slidesPerView: 3,
   centeredSlides: true,
   grabCursor: true,
   direction: 'horizontal',
   loop: true,
-  centeredSlide: true,
+  //centeredSlide: true,
 
   autoplay: {
     delay: 2000,
@@ -61,19 +59,15 @@ const swiper = new Swiper('.swiper', {
   },
 
   breakpoints: {
-    1024: {
-      spaceBetween: 30,
-      slidesPerView: 3
-    },
-     
-    768: {
+    520: {
       slidesPerView: 2,
-      spaceBetween: 25
+      spaceBetween: 10
     },
 
-    520: {
-      slidesPerView: 1,
-      spaceBetween: 25
+    1230: {
+      slidesPerView: 3,
+      spaceBetween: 20
+      
     }
   }
 });

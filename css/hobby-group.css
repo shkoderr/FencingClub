@@ -1,5 +1,5 @@
 .section-hobby {
-  margin: 100px 0;
+  margin-top: 100px;
 }
 
 .hobby-text {
@@ -42,11 +42,25 @@
 .submit__personal {
   display: flex;
   justify-content: center;
-  margin: 80px auto 0;
+  margin: 0 auto;
   width: 300px;
+  font-size: 1.5em;
+  padding: 14px;
 }
 
 .personal-prompt {
   margin: 50px 0;
   text-align: center;
+}
+
+@media(max-width: 768px) {
+  .hobby-text {
+    font-size: 1em;
+  }
+}
+
+@media(max-width: 375px) {
+  .hobby-text {
+    font-size: 0.9em;
+  }
 }

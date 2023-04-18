@@ -1,5 +1,5 @@
 .section-trial {
-  margin: 100px;
+  margin: 100px auto 0;
 }
 
 .trial-text {
@@ -7,4 +7,11 @@
   margin-top: 20px;
   font-size: 20px;
   line-height: 1.5;
+}
+
+/* ADAPTIVE LAYOUT */
+@media(max-width: 768px) {
+  .trial-text {
+    font-size: 1em;
+  }
 }
