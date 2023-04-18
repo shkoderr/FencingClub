@@ -353,12 +353,11 @@ body {
 @media (max-width: 768px) {
   /* HEADER */
   .header__inner {
-    margin-bottom: 6rem;
-    min-height: 80vh;
+    min-height: 70vh;
   }
 
   .logo_img {
-    width: 17em;
+    width: 18em;
   }
 
   .menu {
@@ -463,5 +462,11 @@ body {
 
   .address {
     order: 1;
+  }
+}
+
+@media(max-width: 575px) {
+  .header__inner {
+    min-height: 60vh;
   }
 }
