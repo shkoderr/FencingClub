@@ -354,6 +354,7 @@ body {
   /* HEADER */
   .header__inner {
     margin-bottom: 6rem;
+    min-height: 80vh;
   }
 
   .logo_img {
