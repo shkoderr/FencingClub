@@ -35,7 +35,6 @@ const swiper = new Swiper('.swiper', {
   grabCursor: true,
   direction: 'horizontal',
   loop: true,
-  //centeredSlide: true,
 
   autoplay: {
     delay: 2000,
@@ -59,12 +58,15 @@ const swiper = new Swiper('.swiper', {
   },
 
   breakpoints: {
-    520: {
+    400: {
+      slidesPerView: 1,
+    },
+    640: {
       slidesPerView: 2,
       spaceBetween: 10
     },
 
-    1230: {
+    990: {
       slidesPerView: 3,
       spaceBetween: 20
       

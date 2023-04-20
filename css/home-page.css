@@ -203,4 +203,9 @@
   .accordeon__header {
     font-size: 0.75em;
   }
+
+  .accordeon__content {
+    padding: 5px;
+    font-size: 0.75em;
+  }
 }

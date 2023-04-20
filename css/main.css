@@ -288,9 +288,7 @@ body {
 }
 
 .slider__img {
-  width: 400px;
-  height: auto;
-  margin-right: 20px;
+  width: 24rem;
   aspect-ratio: 3/2;
 }
 
@@ -306,6 +304,12 @@ body {
   .nav__link {
     font-size: 1.4rem;
     width: 200px;
+  }
+
+  /* SLIDER */
+  .slider__img {
+    width: 20rem;
+    aspect-ratio: 3/2;
   }
 
   /* FOOTER */
@@ -397,6 +401,12 @@ body {
   .submit-btn-personal {
     padding: 18px;
     font-size: 14px;
+  }
+
+  /* SLIDER */
+  .slider__img {
+    width: 19rem;
+    aspect-ratio: 3/2;
   }
 
   /* FOOTER */
