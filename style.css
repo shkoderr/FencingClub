@@ -1,9 +1,6 @@
-@import url('./personal.css');
-@import url('./hobby-group.css');
-@import url('./about.css');
-@import url('./home-page.css');
-@import url('./trial-page.css');
-
+/*
+Theme Name: FencingClub BASA
+*/
 
 /* ----COMMON STYLES---- */
 *,
@@ -25,7 +22,6 @@ body {
   padding: 0 15px;
   margin: 0 auto;
 }
-
 
 /*-------HEADER-------*/
 .section-header {
@@ -151,7 +147,6 @@ body {
   max-width: 400px;
 }
 
-
 .footer__title {
   margin-bottom: 20px;
   color: #828282;
@@ -186,7 +181,6 @@ body {
   width: 100px;
   margin: 40px auto;
 }
-
 
 /* -----BUTTONS----- */
 .submit-btn {
@@ -281,7 +275,6 @@ body {
   font-size: 17px;
 }
 
-
 /* -------SlIDER------- */
 .section-slider {
   margin: 100px auto;
@@ -292,7 +285,257 @@ body {
   aspect-ratio: 3/2;
 }
 
+/* HOME */
+.cards {
+  display: flex;
+  justify-content: space-around;
+  color: #104489;
+}
 
+.cards__inner {
+  background: #104489 transparent;
+  aspect-ratio: 1/1.5;
+  transition: 0.2s linear;
+}
+
+.cards__item img {
+  width: 32em;
+  aspect-ratio: 1/1.5;
+  transition: 0.2s linear;
+}
+
+.cards__inner:hover {
+  background: #104489;
+}
+
+.cards__inner:hover img {
+  opacity: 0.5;
+}
+
+.cards__text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 300px;
+}
+
+.cards__title {
+  margin-top: 20px;
+  font-size: 26px;
+}
+
+.cards__description {
+  margin: 20px 0;
+  font-size: 20px;
+  width: 500px;
+}
+
+.cards__btn {
+  font-size: 14px;
+  text-transform: uppercase;
+  padding: 20px;
+  background-color: #f8f8ff;
+  color: #104489;
+  border: 2px solid #104489;
+  border-radius: 3px;
+  transition: 0.2s linear;
+}
+
+.cards__btn:hover {
+  background-color: #104489;
+  color: #f8f8ff;
+  cursor: pointer;
+}
+
+/*--------------QUESTIONS--------------*/
+.question_header {
+  color: #333;
+  margin: 30px 0;
+  padding-top: 30px;
+  font-size: 30px;
+}
+
+.accordeon {
+  color: #333;
+  line-height: 1.8;
+  font-size: 20px;
+  padding: 0 0 30px 20px;
+}
+
+.accordeon__header {
+  font-size: 1em;
+  font-weight: 700;
+  transition: 0.3s linear;
+  cursor: pointer;
+}
+
+.accordeon__header:hover {
+  color: #104489;
+  text-shadow: rgba(0, 142, 236, 0.815) 1px 0 15px;
+  transform: translate(0px, 2px);
+}
+
+.accordeon__header.active {
+  color: #104489;
+  text-shadow: rgba(0, 142, 236, 0.815) 1px 0 20px;
+  transform: translate(0px, 2px);
+}
+
+.accordeon__content {
+  padding: 10px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease-in-out;
+}
+
+/* ABOUT */
+.section-page-about {
+  margin: 60px auto 100px;
+  color: #f8f8ff;
+  background-image: url(../assets/images/image_for_aboutpage2.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+/*-------ABOUT TEXT--------*/
+.about-header {
+  padding-top: 50px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.about-text {
+  padding: 0 16px 400px;
+  margin-top: 20px;
+  font-size: 20px;
+  line-height: 1.5;
+}
+
+.about-text__item {
+  margin: 30px 10px;
+}
+
+.about__link {
+  text-decoration: none;
+  color: rgb(0, 142, 236);
+  text-align: center;
+  transition: 0.2s linear;
+}
+
+.about__link:hover {
+  text-decoration: underline;
+  color: rgb(0, 142, 236);
+  text-shadow: rgba(0, 142, 236, 1) 3px 0 20px;
+}
+
+/* HOBBY-GROUP */
+.section-hobby {
+  margin-top: 100px;
+}
+
+.hobby-text {
+  font-size: 20px;
+}
+
+.benefits__list {
+  padding-left: 50px;
+  line-height: 2;
+}
+
+.hobby-group {
+  margin-top: 100px;
+}
+
+.about-text__item {
+  line-height: 1.8;
+}
+
+/* Программы занятий */
+
+.programs__item {
+  margin-bottom: 50px;
+  flex: 50%;
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+.programs__item-img {
+  width: 200px;
+  height: 200px;
+}
+
+.programs__item-title {
+  font-size: 24px;
+}
+
+/* Запись на индивидуальные занятия */
+.submit__personal {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  width: 300px;
+  font-size: 1.5em;
+  padding: 14px;
+}
+
+.personal-prompt {
+  margin: 50px 0;
+  text-align: center;
+}
+
+/* TRIAL-PAGE */
+.section-trial {
+  margin: 100px auto 0;
+}
+
+.trial-text {
+  padding: 0 16px;
+  margin-top: 20px;
+  font-size: 20px;
+  line-height: 1.5;
+}
+
+/* PERSONAL */
+.menu-personal {
+  align-self: flex-start;
+}
+
+.nav__link.nav__link-personal {
+  position: relative;
+  font-size: 20px;
+}
+
+.nav__link.nav__link-personal::before {
+  content: '';
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 10px 25px 10px 0;
+  border-color: transparent #104489;
+  position: absolute;
+  z-index: 1000;
+  inset: 6px -35px;
+}
+
+.personal {
+  margin: 50px 0 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+
+.personal__image {
+  width: 20em;
+  height: auto;
+}
+
+.personal__text {
+  flex: 0.7;
+  font-size: 20px;
+  list-style: square;
+}
 
 /* ----- ADAPTIVE LAYOUT ----- */
 @media (max-width: 1230px) {
@@ -321,10 +564,34 @@ body {
     max-width: 250px;
     max-height: 250px;
   }
+
+  /* Cards */
+  .cards__inner {
+    width: 400px;
+  }
+  .cards__item img {
+    width: 400px;
+    aspect-ratio: 1/1.5;
+  }
+
+  .cards__item {
+    width: 400px;
+  }
+
+  .cards__description {
+    width: 400px;
+  }
+
+  .personal__image {
+    width: 25em;
+  }
+
+  .about-text__item {
+    font-size: 0.8em;
+  }
 }
 
 @media (max-width: 990px) {
-
   .contacts {
     gap: 2rem;
   }
@@ -350,8 +617,39 @@ body {
     font-size: 14px;
   }
 
-  
+  /* Cards */
+  .cards__inner {
+    width: 300px;
+  }
+  .cards__item img {
+    width: 300px;
+    aspect-ratio: 1/1.5;
+  }
 
+  .cards__item {
+    width: 300px;
+  }
+
+  .cards__description {
+    width: 300px;
+    font-size: 18px;
+  }
+
+  .cards__btn {
+    padding: 18px;
+  }
+
+  .personal {
+    flex-direction: column;
+  }
+
+  .nav__link.nav__link-personal {
+    margin-left: 2em;
+  }
+
+  .about-text__item {
+    font-size: 1em;
+  }
 }
 
 @media (max-width: 768px) {
@@ -417,10 +715,63 @@ body {
   .map {
     order: 2;
   }
-  
+
+  /* Sign */
+  .price {
+    font-size: 15px;
+  }
+
+  /* Cards */
+  .cards__inner {
+    width: 250px;
+  }
+  .cards__item img {
+    width: 250px;
+    aspect-ratio: 1/1.5;
+  }
+
+  .cards__item {
+    width: 250px;
+  }
+
+  .cards__description {
+    width: 250px;
+    font-size: 15px;
+  }
+
+  /* Accordeon */
+  .question_header {
+    font-size: 28px;
+  }
+
+  .accordeon__header {
+    font-size: 0.9em;
+  }
+
+  .about-text__item {
+    font-size: 0.8em;
+    padding: 0 1em;
+  }
+
+  .trial-text {
+    font-size: 1.2em;
+  }
+
+  .hobby-text {
+    font-size: 1em;
+  }
+
+  .personal-prompt {
+    font-size: 1.5em;
+  }
+
+  .about-text {
+    padding-bottom: 100px;
+    font-size: 1.1em;
+  }
 }
 
-@media(max-width: 575px) {
+@media (max-width: 575px) {
   /* HEADER */
   .club_name {
     font-size: 1.7em;
@@ -473,10 +824,64 @@ body {
   .address {
     order: 1;
   }
-}
 
-@media(max-width: 575px) {
   .header__inner {
     min-height: 60vh;
+  }
+
+  /* CARDS */
+  .cards {
+    flex-direction: column;
+    align-items: center;
+    gap: 5em;
+  }
+
+  /* Accordeon */
+  .question_header {
+    font-size: 24px;
+  }
+
+  .personal__image {
+    width: 23em;
+  }
+
+  .nav__link.nav__link-personal {
+    margin-left: 1.5em;
+    font-size: 1em;
+  }
+
+  .nav__link.nav__link-personal::before {
+    inset: 2px -35px;
+  }
+
+  .personal-prompt {
+    font-size: 1.3em;
+  }
+
+  .about-text__item {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 375px) {
+  .personal__image {
+    width: 18em;
+  }
+
+  .accordeon__header {
+    font-size: 0.75em;
+  }
+
+  .accordeon__content {
+    padding: 5px;
+    font-size: 0.75em;
+  }
+
+  .hobby-text {
+    font-size: 1em;
+  }
+
+  .personal-prompt {
+    font-size: 1.2em;
   }
 }
