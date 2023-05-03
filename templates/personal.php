@@ -1,40 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="https://kit.fontawesome.com/a6979ee88b.js" crossorigin="anonymous"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" type="text/css" href="../assets/slick/slick.css" />
-    <link rel="stylesheet" type="text/css" href="../assets/slick/slick-theme.css" />
-    <link rel="stylesheet" href="../css/style.css" />
-    <title>Индивидуальные уроки</title>
-  </head>
-  <body>
-    <!-- Логотип и навигация по сайту -->
-    <header class="header">
-      <img
-        class="header__img"
-        src="../assets/images/pexels-artem-podrez-5941996.jpg"
-        alt="Изображение фехтовальщиков"
-      />
-      <div class="container">
-        <div class="header__inner">
-          <div class="logo">
-            <a href="../index.html">
-              <img class="logo_img" src="../assets/images/logo.png" alt="club logo" />
-            </a>
-            <h2 class="club_name">Фехтовальный клуб "BASA"</h2>
-          </div>
-          <nav class="menu-personal">
-            <a class="nav__link nav__link-personal" href="./hobby-group.html">Назад в Хобби группу</a>
-          </nav>
-        </div>
-      </div>
-    </header>
 
+    <?php 
+    /*
+    Template Name: Индивидуальные уроки
+    */
+    get_header(); ?>
     <main class="main">
       <h3 class="section-header">Индивидуальные уроки (по договоренности с тренером)</h3>
       <article class="personal">

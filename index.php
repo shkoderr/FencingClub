@@ -1,4 +1,9 @@
-  <?php get_header(); ?>
+  <?php 
+  /*
+  Template Name: Главная
+  */
+  
+  get_header(); ?>
 
   <section class="section section-about">
     <div class="container">

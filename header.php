@@ -7,8 +7,15 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="css/style.css" />
-    <title>BASA Fencing Club</title>
+    <title>
+      <?php
+        if(is_404()) {
+          echo 'Ошибка 404';
+        } else {
+          the_title();
+        }
+      ?>
+    </title>
     <?php wp_head(); ?>
   </head>
   <body>
@@ -23,14 +30,17 @@
             </a>
             <h2 class="club_name">Фехтовальный клуб "BASA"</h2>
           </div>
-          <nav class="menu">
-            <a class="nav__link" href="html/about.html">О нас</a>
-            <a class="nav__link" href="html/trial-session.html">Пробное занятие</a>
-            <a class="nav__link" href="html/hobby-group.html">Хобби группа</a>
-          </nav>
+          <? 
+            wp_nav_menu( [
+              'theme_location' => 'menu',
+              'container' => '',
+              'menu_class' => '',
+              'menu_id' => ''
+            ] );
+          ?>
+          </div>
         </div>
-      </div>
-    </header>
+      </header>
 
        <!-- Запись на занятия -->
     <section class="section section-sign">
