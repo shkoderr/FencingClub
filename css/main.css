@@ -187,6 +187,18 @@ body {
   margin: 40px auto;
 }
 
+/* -----LANGUAGE SELECT----- */
+.lang-wrapper {
+  margin-top: 1rem;
+}
+
+.lang-switcher {
+  padding: 0.5rem;
+  background-color: #000;
+  color: #f8f8ff;
+  border: 1px solid #f8f8ff;
+}
+
 
 /* -----BUTTONS----- */
 .submit-btn {

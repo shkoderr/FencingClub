@@ -20,12 +20,12 @@
             <a href="#">
               <img class="logo_img" src="assets/images/logo.png" alt="club logo" />
             </a>
-            <h2 class="club_name">Фехтовальный клуб "BASA"</h2>
+            <h2 class="club_name" id="title">Фехтовальный клуб "BASA"</h2>
           </div>
           <nav class="menu">
-            <a class="nav__link" href="html/about.html">О нас</a>
-            <a class="nav__link" href="html/trial-session.html">Пробное занятие</a>
-            <a class="nav__link" href="html/hobby-group.html">Хобби группа</a>
+            <a class="nav__link" href="html/about.html" id="first__link">О нас</a>
+            <a class="nav__link" href="html/trial-session.html" id="second__link">Пробное занятие</a>
+            <a class="nav__link" href="html/hobby-group.html" id="third__link">Хобби группа</a>
           </nav>
         </div>
       </div>
@@ -37,7 +37,7 @@
       <section class="section section-sign">
         <div class="container container-sign">
           <a href="https://mail.google.com/mail" target="_blank"
-            ><button class="submit-btn" type="submit">Записаться на занятие <br> <strong class="price">50 &#8382</strong></button></a
+            ><button class="submit-btn" type="submit" id="submit">Записаться на занятие <br> <strong class="price">50 &#8382</strong></button></a
           >
 
           <div class="contacts">
@@ -72,13 +72,13 @@
                 </a>
               </div>
               <div class="cards__text">
-                <h3 class="cards__title">О нас</h3>
-                <p class="cards__description">
+                <h3 class="cards__title" id="about">О нас</h3>
+                <p class="cards__description" id="descriptionAbout">
                   Клуб “BASA” — одна большая семья. У нас дружный интернациональный коллектив спортсменов и тренеров.
                   Любовь к фехтованию — это то, что всех нас объединяет.
                 </p>
                 <a href="html/about.html">
-                  <button class="cards__btn">Узнать больше</button>
+                  <button class="cards__btn" id="learn-more">Узнать больше</button>
                 </a>
               </div>
             </div>
@@ -89,13 +89,13 @@
                 </a>
               </div>
               <div class="cards__text">
-                <h3 class="cards__title">Хобби группа</h3>
-                <p class="cards__description">
+                <h3 class="cards__title" id="hobby-group">Хобби группа</h3>
+                <p class="cards__description" id="descriptionHobby">
                   Найти хобби в новом для себя городе? Запросто! В ноябре 2022 мы запустили новый проект — любительскую
                   группу для взрослых фехтовальщиков.
                 </p>
                 <a href="html/about.html">
-                  <button class="cards__btn">Узнать больше</button>
+                  <button class="cards__btn" id="learn-more">Узнать больше</button>
                 </a>
               </div>
             </div>
@@ -108,9 +108,9 @@
       <!-- FAQ-раздел -->
       <section class="section section-questions">
         <div class="container">
-          <h2 class="question_header">Вопросы и ответы</h2>
+          <h2 class="question_header" id="FAQ">Вопросы и ответы</h2>
           <div class="accordeon">
-            <div class="accordeon__item">
+            <div class="accordeon__item" id="item1">
               <div class="accordeon__header">
                 Я хочу, чтобы мой ребенок/дети занимались фехтованием. Есть ли у вас детская группа?
               </div>
@@ -120,7 +120,7 @@
                 на пробное занятие.
               </div>
             </div>
-            <div class="accordeon__item">
+            <div class="accordeon__item" id="item2">
               <div class="accordeon__header">
                 Я не новичок, раньше уже занимался фехтованием. Есть ли в клубе группа для меня?
               </div>
@@ -129,21 +129,21 @@
                 Вас в зависимости от опыта и пожеланий.
               </div>
             </div>
-            <div class="accordeon__item">
+            <div class="accordeon__item" id="item3">
               <div class="accordeon__header">Безопасно ли заниматься фехтованием?</div>
               <div class="accordeon__content">
                 При условии соблюдения техники безопасности фехтование - один из самых неопасных видов спорта. Он менее
                 травматичен чем, например, футбол.
               </div>
             </div>
-            <div class="accordeon__item">
+            <div class="accordeon__item" id="item4">
               <div class="accordeon__header">У меня нет фехтовального инвентаря. Нужно ли его покупать?</div>
               <div class="accordeon__content">
                 Для пробного занятия и первого месяца занятий клуб предоставляет весь необходимый инвентарь. После Вы
                 можете купить инвентарь в магазине клуба или взять его в аренду.
               </div>
             </div>
-            <div class="accordeon__item">
+            <div class="accordeon__item" id="item5">
               <div class="accordeon__header">
                 Обязательно ли посещать три занятия в неделю? Отстану ли я от других, если буду ходить реже, чем
                 остальные?
@@ -153,13 +153,13 @@
                 Пропущенные занятия всегда можно компенсировать за счет индивидуальных занятий с тренером.
               </div>
             </div>
-            <div class="accordeon__item">
+            <div class="accordeon__item" id="item6">
               <div class="accordeon__header">На каком виде оружия можно заниматься?</div>
               <div class="accordeon__content">
                 В клубе проводятся занятия на трех видах оружия: рапире, шпаге, сабле.
               </div>
             </div>
-            <div class="accordeon__item">
+            <div class="accordeon__item" id="item7">
               <div class="accordeon__header">
                 К сожалению, я пока еще плохо говорю по-грузински. Буду ли я понимать тренера?
               </div>
@@ -190,13 +190,13 @@
         </div>
 
         <div class="address">
-          <h3 class="footer__title">Адрес</h3>
+          <h3 class="footer__title" id="address">Адрес</h3>
           <p>Arena 2, 6 University St, Tbilisi, Georgia</p>
           <img class="footer__logo" src="assets/images/fencing-symbol-svgrepo-com.svg" alt="" />
         </div>
 
         <div class="footer-contacts">
-          <h3 class="footer__title">Связаться с нами</h3>
+          <h3 class="footer__title" id="contact-us">Связаться с нами</h3>
           <div class="footer-contacts__item">
             <a class="footer-contacts__link" href="tel:+995-597-757-512">
               <i class="fa-solid fa-phone"></i>
@@ -221,10 +221,21 @@
               <span class="footer-contacts__title">Telegram</span>
             </a>
           </div>
+
+          <div class="lang-wrapper">
+            <select class="lang-switcher" id="languageSelect" onchange="changeLanguage(this.value)">
+              <option value="eng">Eng</option>
+              <option value="geo">Geo</option>
+              <option value="rus">Rus</option>
+            </select>
+          </div>
         </div>
       </div>
     </footer>
 
+    <script src="assets/lang/eng.js"></script>
+    <script src="assets/lang/geo.js"></script>
+    <script src="assets/lang/rus.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>

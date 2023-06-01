@@ -1,5 +1,5 @@
-//Объявляем переменные:
 const headers = document.querySelectorAll('.accordeon__header')
+let currentLanguage = 'rus'
 
 //Описываем функционал:
 for (let i = 0; i < headers.length; i++) {
@@ -74,3 +74,22 @@ const swiper = new Swiper('.swiper', {
     }
   }
 });
+
+
+//--Switch languages
+ function loadLanguage(language) {
+  const script = document.createElement('script');
+  script.src = 'assets/lang/' + language + '.js';
+  
+  document.head.appendChild(script);
+}
+
+ function updateContent() {
+  document.getElementById('title').textContent = translations.title;
+}
+
+ function changeLanguage(language) {
+  currentLanguage = language;
+  loadLanguage(language);
+  updateContent();
+}
