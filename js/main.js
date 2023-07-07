@@ -136,6 +136,11 @@ const homePageTexts = {
 }
 
 const aboutPageTexts = {
+  'title': {
+    en: 'About Us',
+    ge: 'ჩვენს შესახებ',
+    ru: 'О нас',
+  },
   'about__page-title': {
     en: "Fencing Club 'Basa'",
     ge: "Fencing Club 'Basa'",
@@ -219,6 +224,11 @@ const aboutPageTexts = {
 }
 
 const hobbyPageTexts = {
+  'title': {
+    en: 'Hobby Group',
+    ge: 'ჰობი - ჯგუფი',
+    ru: 'Хобби группа',
+  },
   'hobby-title': {
     en: "Fencing Club 'Basa'",
     ge: "Fencing Club 'Basa'",
