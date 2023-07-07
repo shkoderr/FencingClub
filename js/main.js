@@ -630,7 +630,7 @@ langButtons.forEach((btn) => {
 
   //TODO: вынести в отдельный метод при рефакторинге!
 
-  btn.addEventListener('touchend', (event) => {
+  btn.addEventListener('touchstart', (event) => {
     currentLang = event.target.dataset.btn
     localStorage.setItem('language', event.target.dataset.btn)
     resetActiveClass(langButtons, 'lang-switcher__btn-active')
