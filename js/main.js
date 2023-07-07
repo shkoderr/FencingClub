@@ -1,10 +1,10 @@
 const headers = document.querySelectorAll('.accordeon__header')
 
-const langButtons = document.querySelectorAll("[data-btn]")
-const allLangs = ["en", "ru", "ge"]
-let currentLang = "ru"
+const langButtons = document.querySelectorAll('[data-btn]')
+const allLangs = ['en', 'ru', 'ge']
+let currentLang = localStorage.getItem('language') || chekBrowserLanguage() || 'ru'
 
-const currentPathName = window.location.pathname;
+const currentPathName = window.location.pathname
 let currentTextObject = {}
 
 const homePageTexts = {
@@ -40,7 +40,7 @@ const homePageTexts = {
   },
   'home-description-about': {
     en: 'The BASA Club is one big family. We have a friendly international team of athletes and coaches. The love of fencing is what unites us all.',
-    ge: 'კლუბი “BASA” - ერთი დიდი ოჯახია. ჩვენთან სპორტსმენებისა და მწვრთელების მეგობრული და ინტერნაციონალური კოლექტივია. ჩვენ ყველას ფარიკაობისადმი სიყვარული გვაერთიანებს. ჩვენ ერთად ვვარჯიშობთ და ვიღებთ მონაწილეობას შეჯიბრებებში, ერთად ვმოგზაურობთ, ერთად ავღნიშნავთ დაბადების დღეებსა და სხვა დღესასწაულებს.',
+    ge: 'კლუბი “BASA” - ერთი დიდი ოჯახია. ჩვენთან სპორტსმენებისა და მწვრთელების მეგობრული და ინტერნაციონალური კოლექტივია. ჩვენ ყველას ფარიკაობისადმი სიყვარული გვაერთიანებს.',
     ru: 'Клуб “BASA” — одна большая семья. У нас дружный интернациональный коллектив спортсменов и тренеров. Любовь к фехтованию — это то, что всех нас объединяет.',
   },
   'learn-more': {
@@ -123,9 +123,6 @@ const homePageTexts = {
     ge: 'კლუბში მეცადინეობა ტარდება სამი სახის იარაღით: რაპირა, დაშნა, ხმალი.',
     ru: 'В клубе проводятся занятия на трех видах оружия: рапире, шпаге, сабле.',
   },
-
-  //TO DO: добавить 7 аккордеон!
-
   address: {
     en: 'Address',
     ge: 'მისამართი',
@@ -221,6 +218,255 @@ const aboutPageTexts = {
   },
 }
 
+const hobbyPageTexts = {
+  'hobby-title': {
+    en: "Fencing Club 'Basa'",
+    ge: "Fencing Club 'Basa'",
+    ru: "Фехтовальный клуб 'BASA'",
+  },
+  'hobby-header_link-1': {
+    en: 'Home Page',
+    ge: 'მთავარ გვერდზე',
+    ru: 'На главную',
+  },
+  'hobby-header_link-2': {
+    en: 'About Us',
+    ge: 'ჩვენს შესახებ',
+    ru: 'О нас',
+  },
+  'hobby-header_link-3': {
+    en: 'Trial session',
+    ge: 'საცდელი მეცადინეობა',
+    ru: 'Пробное занятие',
+  },
+  'submit-btn': {
+    en: 'Sign up for a class',
+    ge: 'დარეგისტრირდით კლასში',
+    ru: 'Записаться на занятие',
+  },
+  mail: {
+    en: 'E-mail',
+    ge: 'ფოსტა',
+    ru: 'Почта',
+  },
+  'hobby-header': {
+    en: 'Find a hobby in a new city for yourself? Easily!',
+    ge: 'იპოვნო ჰობი შენთვის ახალ ქალაქში? ძალზედ მარტივია!',
+    ru: 'Найти хобби в новом для себя городе? Запросто!',
+  },
+  'hobby-text-1': {
+    en: 'In November 2022, we launched a new project — an amateur a group for adult fencers.',
+    ge: '2022 წელს წამოვიწყეთ ახალი პროექტი - სამოყვარულო ჯგუფი ზრდასრული მოფარიკავეებისთვის.',
+    ru: 'В ноябре 2022 мы запустили новый проект — любительскую группу для взрослых фехтовальщиков.',
+  },
+  'hobby-text-2': {
+    en: 'We invite everyone to join classes in a group of novice adults. The type of weapon is a sword.',
+    ge: 'ვიწვევთ ყველა მსურველს შემოუერთდეს დამწყებ ზრდასრულთა ჯგუფის მეცადინეობებს. იარაღის სახეობა - დაშნა.',
+    ru: 'Приглашаем всех желающих присоединиться к занятиям в группе начинающих взрослых. Вид оружия — шпага.',
+  },
+  'hobby-text-3': {
+    en: 'The subscription fee is 200 GEL/month. Trainings are held three times a week.',
+    ge: 'ერთთვიანი აბონიმენტის ღირებულება - 200 ლარი. ვარჯიში ტარდება სამჯერ კვირაში.',
+    ru: 'Стоимость абонемента — 200 GEL/месяц. Тренировки проводятся три раза в неделю.',
+  },
+  'hobby-text-4': {
+    en: 'All workouts start with a warm-up and end with a cool-down. We monitor the health and comfort of our students.',
+    ge: 'ყველა ვარჯიში მოთელვით იწყება და მთავრდება ქულდაუნით. ჩვენ თვალ-ყურს ვადევნებთ  ჩვენი მოსწავლეების ჯანმრთელობასა და კომფორტს.',
+    ru: 'Все тренировки начинаются с разминки и заканчиваются кул-дауном. Мы следим за здоровьем и комфортом наших учеников.',
+  },
+  'hobby-benefits': {
+    en: 'An integrated approach. In the program:',
+    ge: 'კომპლექსური მიდგომა. პროგრამაშია:',
+    ru: 'Комплексный подход. В программе:',
+  },
+  'benefits-text-1': {
+    en: 'A wonderful international team.',
+    ge: 'შესანიშნავი ინტერნაციონალური კოლექტივი.',
+    ru: 'Замечательный интернациональный коллектив.',
+  },
+  'benefits-text-2': {
+    en: 'Any age. Any level.',
+    ge: 'ნებისმიერი ასაკი. ნებისმიერი დონე.',
+    ru: 'Любой возраст. Любой уровень.',
+  },
+  'benefits-text-3': {
+    en: 'Group classes.',
+    ge: 'ჯგუფური მეცადინეობა.',
+    ru: 'Групповые занятия.',
+  },
+  'benefits-text-4': {
+    en: 'Movements',
+    ge: 'გადაადგილება',
+    ru: 'Передвижения',
+  },
+  'benefits-text-5': {
+    en: 'Work on targets.',
+    ge: 'სამიზნეზე მუშაობა',
+    ru: 'Работа на мишенях.',
+  },
+  'benefits-text-6': {
+    en: 'Pair exercises',
+    ge: 'წყვილების ვარჯიშები',
+    ru: 'Парные упражнения',
+  },
+  'benefits-text-7': {
+    en: 'Theoretical classes (video analysis)',
+    ge: 'თეორიული მეცადინეობა (ვიდეოანალიზი)',
+    ru: 'Теоретические занятия (видеоанализ)',
+  },
+  'benefits-text-8': {
+    en: 'Fencing, of course. Lots and lots of sparring!',
+    ge: 'რაღა თქმა უნდა - ფარიკაობა. ბევრი, ბევრი სპარინგი!',
+    ru: 'Конечно же, фехтование. Много-много спарринга!',
+  },
+  'benefits-text-9': {
+    en: 'You will be able to participate in real competitions!',
+    ge: 'თქვენ შეგეძლებათ ნამდვილ შეჯიბრებებში მონაწილეობის მიღება!',
+    ru: 'Вы сможете участвовать в настоящих соревнованиях!',
+  },
+  'personal-prompt': {
+    en: 'You can also sign up for individual classes',
+    ge: 'ასევე შეგიძლიათ ჩაეწეროთ ინდივიდუალურ მეცადინეობაზე',
+    ru: 'Также вы можете записаться на индивидуальные занятия',
+  },
+  'submit-personal': {
+    en: 'Individual classes',
+    ge: 'ინდივიდუალური გაკვეთილები',
+    ru: 'Индивидуальные уроки',
+  },
+  'hobby-photos': {
+    en: 'Photos of our club',
+    ge: 'ჩვენი კლუბის ფოტოები',
+    ru: 'Фото нашего клуба',
+  },
+  address: {
+    en: 'Address',
+    ge: 'მისამართი',
+    ru: 'Адрес',
+  },
+  'contact-us': {
+    en: 'Contact us',
+    ge: 'დაგვიკავშირდით',
+    ru: 'Связаться с нами',
+  },
+}
+
+const personalPageTexts = {
+  title: {
+    en: 'Individual classes',
+    ge: 'ინდივიდუალური გაკვეთილები',
+    ru: 'Индивидуальные уроки',
+  },
+  'page-title': {
+    en: "Fencing Club 'Basa'",
+    ge: "Fencing Club 'Basa'",
+    ru: "Фехтовальный клуб 'BASA'",
+  },
+  'back-to-hobby': {
+    en: 'Back to the Hobby Group',
+    ge: 'დაბრუნება ჰობი ჯგუფში',
+    ru: 'Назад в Хобби группу',
+  },
+  'personal-header': {
+    en: 'Individual lessons (by agreement with the coach)',
+    ge: 'ინდივიდუალური გაკვეთილები (მწვრთნელთან შეთანხმებით)',
+    ru: 'Индивидуальные уроки (по договоренности с тренером)',
+  },
+  'personal-text-1': {
+    en: 'A very effective and extremely interesting way to learn the basics of fencing: working with a blade, choosing proper distance and other fencing aspects one-on-one with a professional trainer.',
+    ge: 'ძალიან ეფექტური და უჩვეულოდ საინტერესო ხერხია ფარიკაობის საფუძვლების დასაუფლებლად: იარაღის ფლობაზე მუშაობა, სწორი დისტანციის შერჩევა და სხვა ფარიკაობის ასპექტები - და ეს ყველაფერი პროფესიონალ მწვრთნელთან პირისპირ.',
+    ru: ' Очень эффективный и необычайно интересный способ научиться азам фехтования: работе с клинком, выбору    правильной дистанции и другим фехтовальным аспектам один на один с профессиональным тренером.',
+  },
+  'personal-text-2': {
+    en: 'Especially useful for novice amateur athletes. Individual approach. The coach draws up a lesson program taking into account the individual characteristics and schedule of the athlete.',
+    ge: 'იკ განსაკუთრებით სასარგებლოა დამწყებ სპორტმენ-მოყვარულთათვის. ინდივიდუალური მიდგომა. მწვრთნელი ადგენს მეცადინეობის პროგრამას სპორტსმენის ინდივიდუალური მახასიათებლებისა და მისი განრიგის გათვალისწინებით.',
+    ru: 'Особенно полезны для начинающих спортсменов-любителей. Индивидуальный подход. Тренер составляет программу уроков с учетом индивидуальных особенностей и расписания спортсмена.',
+  },
+  address: {
+    en: 'Address',
+    ge: 'მისამართი',
+    ru: 'Адрес',
+  },
+  'contact-us': {
+    en: 'Contact us',
+    ge: 'დაგვიკავშირდით',
+    ru: 'Связаться с нами',
+  },
+}
+
+const trialPageTexts = {
+  title: {
+    en: 'Trial session',
+    ge: 'სასამართლო სხდომა',
+    ru: 'Пробное занятие',
+  },
+  'page-title': {
+    en: "Fencing Club 'Basa'",
+    ge: "Fencing Club 'Basa'",
+    ru: "Фехтовальный клуб 'BASA'",
+  },
+  'trial-header_link-1': {
+    en: 'Home Page',
+    ge: 'მთავარ გვერდზე',
+    ru: 'На главную',
+  },
+  'trial-header_link-2': {
+    en: 'About Us',
+    ge: 'ჩვენს შესახებ',
+    ru: 'О нас',
+  },
+  'trial-header_link-3': {
+    en: 'Hobby-Group',
+    ge: 'ჰობი-ჯგუფი ',
+    ru: 'Хобби-группа',
+  },
+  'submit-btn': {
+    en: 'Sign up for a class',
+    ge: 'დარეგისტრირდით კლასში',
+    ru: 'Записаться на занятие',
+  },
+  mail: {
+    en: 'E-mail',
+    ge: 'ფოსტა',
+    ru: 'Почта',
+  },
+  'trial-header': {
+    en: 'How to understand how much fencing you like and suits you?',
+    ge: 'როგორ გავიგოთ, რამდენად მოგვწონს და რამდენად შესაფერისია ჩვენთვის ფარიკაობა?',
+    ru: 'Как понять, насколько фехтование Вам нравится и подходит?',
+  },
+  'trial-text-1': {
+    en: 'Our club gives you a unique opportunity to try yourself in fencing! Come to us for a trial lesson and bring friends and relatives.',
+    ge: ' ჩვენი კლუბი გთავაზობთ უნიკალურ შესაძლებლობას მოსინჯოთ თქვენი თავი ფარიკაობაში! მობრძანდით ჩვენთან საცდელ მეცადინეობაზე და მოიყვანეთ მეგობრები და ნათესავები.',
+    ru: 'Наш клуб предоставляет Вам уникальную возможность попробовать себя в фехтовании! Приходите к нам на пробное занятие и приводите друзей и родственников.',
+  },
+  'trial-text-2': {
+    en: 'The cost of the lesson is 50 Gel / person. The trial session lasts 45 minutes.',
+    ge: 'საცდელი მეცადინეობის ღირებულება - 50 ლარი 1 ადამიანი. მეცადინეობის ხანგრძლივობა 45 წუთია.',
+    ru: 'Стоимость занятия — 50 Gel/чел. Пробное занятие длится 45 минут.',
+  },
+  'trial-text-3': {
+    en: 'A professional trainer will tell you about the club and fencing, answer any of your questions and show you how to properly hold a weapon and move in a fencing stance.',
+    ge: 'პროფესიონალი მწვრთნელი მოგიყვებათ კლუბისა და ფარიკაობის შესახებ, უპასუხებს თქვენს ნებისმიერ შეკითხვას და გაჩვენებთ როგორ დაიჭიროთ სწორად იარაღი და იმოძრაოთ ფარიკაობის დგომით.',
+    ru: 'Профессиональный тренер расскажет Вам о клубе и фехтовании, ответит на любые Ваши вопросы и покажет Вам, как правильно держать оружие и двигаться в фехтовальной стойке.',
+  },
+  'trial-text-4': {
+    en: 'The culmination of the trial session is a real sword fight with a real opponent. Experience live genuine emotions from a fencing match!',
+    ge: 'საცდელი მეცადინეობის კულმინაცია - ნამდვილი შერკინება დაშნით, რეალურ მეტოქესთან. გამოსცადეთ ფარიკაობის ორთაბრძოლით გამოწვეული ცოცხალი, ნამდვილი ემოციები!',
+    ru: 'Кульминация пробного занятия — настоящий бой на шпаге с реальным соперником. Испытайте живые неподдельные эмоции от фехтовального поединка!',
+  },
+  address: {
+    en: 'Address',
+    ge: 'მისამართი',
+    ru: 'Адрес',
+  },
+  'contact-us': {
+    en: 'Contact us',
+    ge: 'დაგვიკავშირდით',
+    ru: 'Связаться с нами',
+  },
+}
+
 //Описываем функционал:
 for (let i = 0; i < headers.length; i++) {
   headers[i].addEventListener('click', showContent)
@@ -249,86 +495,142 @@ function showContent() {
 }
 
 //------SLIDER------
-
-const swiper = new Swiper('.swiper', {
-  centeredSlides: true,
-  grabCursor: true,
-  direction: 'horizontal',
-  loop: true,
-
-  autoplay: {
-    delay: 2000,
-    disableOnInteraction: false
-  },
-
-  pagination: {
-    el: '.swiper-pagination',
-    dynamicBullets: true,
-    clickable: true,
-  },
-
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  },
-
-  keyboard: {
-    enabled: true,
-    onlyInViewport: true,
-  },
-
-  breakpoints: {
-    450: {
-      slidesPerView: 1,
+if (typeof Swiper !== 'undefined') {
+  const swiper = new Swiper('.swiper', {
+    centeredSlides: true,
+    grabCursor: true,
+    direction: 'horizontal',
+    loop: true,
+  
+    autoplay: {
+      delay: 2000,
+      disableOnInteraction: false
     },
-    650: {
-      slidesPerView: 2,
-      centeredSlides: false,
-      spaceBetween: 10
+  
+    pagination: {
+      el: '.swiper-pagination',
+      dynamicBullets: true,
+      clickable: true,
     },
-
-    990: {
-      slidesPerView: 3,
-      spaceBetween: 20
-      
+  
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  
+    keyboard: {
+      enabled: true,
+      onlyInViewport: true,
+    },
+  
+    breakpoints: {
+      450: {
+        slidesPerView: 1,
+      },
+      650: {
+        slidesPerView: 2,
+        centeredSlides: false,
+        spaceBetween: 10
+      },
+  
+      990: {
+        slidesPerView: 3,
+        spaceBetween: 20
+  
+      }
     }
-  }
-});
+  });
+};
 
 
 //========Мультиязычность==============
 
-
 function checkPagePathName() {
   switch (currentPathName) {
-    case "/index.html":
-      currentTexts = homePageTexts;
-      break;
-    case "/html/about.html":
-      currentTexts = aboutPageTexts;
-      break;
-      //TO DO: доделать остальные страницы!
+    case '/index.html':
+      currentTexts = homePageTexts
+      break
+    case '/html/about.html':
+      currentTexts = aboutPageTexts
+      break
+    case '/html/hobby-group.html':
+      currentTexts = hobbyPageTexts
+      break
+    case '/html/personal.html':
+      currentTexts = personalPageTexts
+      break
+    case '/html/trial-session.html':
+      currentTexts = trialPageTexts
+      break
     default:
-      currentTexts = homePageTexts;
-      break;
+      currentTexts = homePageTexts
+      break
   }
 }
-checkPagePathName();
+checkPagePathName()
 
 function changeLang() {
+  checkPagePathName()
+
   for (const key in currentTexts) {
-    let elem = document.querySelector(`[data-lang=${key}]`);
+    let elem = document.querySelector(`[data-lang=${key}]`)
     if (elem) {
-      elem.textContent = currentTexts[key][currentLang];
+      elem.textContent = currentTexts[key][currentLang]
+    }
+  }
+
+  const russianQuestion = document.getElementById('russian_question')
+  if (russianQuestion) {
+    if (currentLang !== 'ru' && currentPathName === '/index.html') {
+      russianQuestion.style.display = 'none'
+    } else {
+      russianQuestion.style.display = 'block'
     }
   }
 }
-changeLang();
+changeLang()
 
-langButtons.forEach((btn => {
+langButtons.forEach((btn) => {
   btn.addEventListener('click', (event) => {
-    currentLang = event.target.dataset.btn;
-    btn.classList.add("lang-switcher__btn-active");
-    changeLang();
+    currentLang = event.target.dataset.btn
+    localStorage.setItem('language', event.target.dataset.btn)
+    resetActiveClass(langButtons, 'lang-switcher__btn-active')
+    btn.classList.add('lang-switcher__btn-active')
+    changeLang()
   })
-}))
+})
+
+function resetActiveClass(arr, activeClass) {
+  arr.forEach((elem) => {
+    elem.classList.remove(activeClass)
+  })
+}
+
+function setActiveButton() {
+  switch (currentLang) {
+    case 'ru':
+      document.querySelector('[data-btn="ru"]').classList.add('lang-switcher__btn-active')
+      break
+    case 'en':
+      document.querySelector('[data-btn="en"]').classList.add('lang-switcher__btn-active')
+      break
+    case 'ge':
+      document.querySelector('[data-btn="ge"]').classList.add('lang-switcher__btn-active')
+      break
+    default:
+      document.querySelector('[data-btn="ru"]').classList.add('lang-switcher__btn-active')
+      break
+  }
+}
+setActiveButton()
+
+function chekBrowserLanguage() {
+  const navLang = navigator.language.slice(0, 2).toLowerCase()
+  const result = allLangs.some((elem) => {
+    return elem === navLang
+  })
+
+  if (result) {
+    return navLang
+  }
+}

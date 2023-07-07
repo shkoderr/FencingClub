@@ -10,7 +10,7 @@
     <link rel="stylesheet" type="text/css" href="../assets/slick/slick.css" />
     <link rel="stylesheet" type="text/css" href="../assets/slick/slick-theme.css" />
     <link rel="stylesheet" href="../css/main.css" />
-    <title>Индивидуальные уроки</title>
+    <title data-lang="title">Индивидуальные уроки</title>
   </head>
   <body>
     <!-- Логотип и навигация по сайту -->
@@ -26,27 +26,27 @@
             <a href="../index.html">
               <img class="logo_img" src="../assets/images/logo.png" alt="club logo" />
             </a>
-            <h2 class="club_name">Фехтовальный клуб "BASA"</h2>
+            <h2 class="club_name" data-lang="page-title">Фехтовальный клуб "BASA"</h2>
           </div>
           <nav class="menu-personal">
-            <a class="nav__link nav__link-personal" href="./hobby-group.html">Назад в Хобби группу</a>
+            <a class="nav__link nav__link-personal" href="./hobby-group.html" data-lang="back-to-hobby">Назад в Хобби группу</a>
           </nav>
         </div>
       </div>
     </header>
 
     <main class="main">
-      <h3 class="section-header">Индивидуальные уроки (по договоренности с тренером)</h3>
+      <h3 class="section-header" data-lang="personal-header">Индивидуальные уроки (по договоренности с тренером)</h3>
       <article class="personal">
         <div class="personal__photo">
           <img src="../assets/images/individual_lesson.jpg" alt="personal trainer photo" class="personal__image" />
         </div>
         <ul class="personal__text">
-          <li class="about-text__item">
+          <li class="about-text__item" data-lang="personal-text-1">
             Очень эффективный и необычайно интересный способ научиться азам фехтования: работе с клинком, выбору
             правильной дистанции и другим фехтовальным аспектам один на один с профессиональным тренером.
           </li>
-          <li class="about-text__item">
+          <li class="about-text__item" data-lang="personal-text-2">
             Особенно полезны для начинающих спортсменов-любителей. Индивидуальный подход. Тренер составляет программу
             уроков с учетом индивидуальных особенностей и расписания спортсмена.
           </li>
@@ -71,13 +71,21 @@
         </div>
 
         <div class="address">
-          <h3 class="footer__title">Адрес</h3>
+          <h3 class="footer__title" data-lang="address">Адрес</h3>
           <p>Arena 2, 6 University St, Tbilisi, Georgia</p>
-          <img class="footer__logo" src="../assets/images/fencing-symbol-svgrepo-com.svg" alt="" />
+          <img class="footer__logo" src="assets/images/fencing-symbol-svgrepo-com.svg" alt="" />
+
+          <div class="lang-wrapper">
+            <button class="lang-switcher__btn" data-btn="en">Eng</button>
+            <button class="lang-switcher__btn" data-btn="ge">Geo</button>
+            <button class="lang-switcher__btn" data-btn="ru">Rus</button>
+          </div>
+          
         </div>
 
+
         <div class="footer-contacts">
-          <h3 class="footer__title">Связаться с нами</h3>
+          <h3 class="footer__title" data-lang="contact-us">Связаться с нами</h3>
           <div class="footer-contacts__item">
             <a class="footer-contacts__link" href="tel:+995-597-757-512">
               <i class="fa-solid fa-phone"></i>
@@ -102,6 +110,8 @@
               <span class="footer-contacts__title">Telegram</span>
             </a>
           </div>
+
+
         </div>
       </div>
     </footer>

@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="../css/main.css" />
-    <title>Пробное занятие</title>
+    <title data-lang="title">Пробное занятие</title>
   </head>
   <body>
     <!-- Логотип и навигация по сайту -->
@@ -24,12 +24,12 @@
             <a href="../index.html">
               <img class="logo_img" src="../assets/images/logo.png" alt="club logo" />
             </a>
-            <h2 class="club_name">Фехтовальный клуб "BASA"</h2>
+            <h2 class="club_name" data-lang="page-title">Фехтовальный клуб "BASA"</h2>
           </div>
           <nav class="menu">
-            <a class="nav__link" href="../index.html">Главная страница</a>
-            <a class="nav__link" href="about.html">О нас</a>
-            <a class="nav__link" href="hobby-group.html">Хобби группа</a>
+            <a class="nav__link" href="../index.html" data-lang="trial-header_link-1">На главную</a>
+            <a class="nav__link" href="about.html" data-lang="trial-header_link-2">О нас</a>
+            <a class="nav__link" href="hobby-group.html" data-lang="trial-header_link-3">Хобби группа</a>
           </nav>
         </div>
       </div>
@@ -39,7 +39,7 @@
       <section class="section section-sign">
         <div class="container container-sign">
           <a href="https://mail.google.com/mail" target="_blank"
-            ><button class="submit-btn" type="submit">Записаться на занятие <br> <strong class="price">50 &#8382</strong></button></a
+            ><button class="submit-btn" type="submit" data-lang="submit-btn">Записаться на занятие <br> <strong class="price">50 &#8382</strong></button></a
           >
           <div class="contacts">
             <a class="contacts__item" href="tel:+995-597-757-512">
@@ -48,7 +48,7 @@
             </a>
             <a class="contacts__item" href="https://mail.google.com/mail" target="_blank">
               <i class="fa-solid fa-envelope"></i>
-              <span>Почта</span>
+              <span data-lang="mail">Почта</span>
             </a>
             <a class="contacts__item" href="https://www.facebook.com/" target="_blank">
               <i class="fa-brands fa-facebook-f"></i>
@@ -64,12 +64,12 @@
       <!-- Текст -->
       <section class="section section-trial">
         <div class="container">
-          <h2 class="section-header">Как понять, насколько фехтование Вам нравится и подходит?</h2>
+          <h2 class="section-header" data-lang="trial-header">Как понять, насколько фехтование Вам нравится и подходит?</h2>
           <article class="trial-text">
-            <p class="about-text__item">Наш клуб предоставляет Вам уникальную возможность попробовать себя в фехтовании! Приходите к нам на пробное занятие и приводите друзей и родственников.</p>
-            <p class="about-text__item">Стоимость занятия — <strong>50 Gel/ чел</strong>. <br>Пробное занятие длится <strong>45 минут</strong>.</p>
-            <p class="about-text__item">Профессиональный тренер расскажет Вам о клубе и фехтовании, ответит на любые Ваши вопросы и покажет Вам, как правильно держать оружие и двигаться в фехтовальной стойке.</p>
-            <p class="about-text__item">Кульминация пробного занятия — настоящий бой на шпаге с реальным соперником. Испытайте живые неподдельные эмоции от фехтовального поединка!</p>
+            <p class="about-text__item" data-lang="trial-text-1">Наш клуб предоставляет Вам уникальную возможность попробовать себя в фехтовании! Приходите к нам на пробное занятие и приводите друзей и родственников.</p>
+            <p class="about-text__item" data-lang="trial-text-2">Стоимость занятия — <strong>50 Gel/ чел</strong>. <br>Пробное занятие длится <strong>45 минут</strong>.</p>
+            <p class="about-text__item" data-lang="trial-text-3">Профессиональный тренер расскажет Вам о клубе и фехтовании, ответит на любые Ваши вопросы и покажет Вам, как правильно держать оружие и двигаться в фехтовальной стойке.</p>
+            <p class="about-text__item" data-lang="trial-text-4">Кульминация пробного занятия — настоящий бой на шпаге с реальным соперником. Испытайте живые неподдельные эмоции от фехтовального поединка!</p>
           </article>
         </div>
       </section>  
@@ -92,13 +92,21 @@
         </div>
 
         <div class="address">
-          <h3 class="footer__title">Адрес</h3>
+          <h3 class="footer__title" data-lang="address">Адрес</h3>
           <p>Arena 2, 6 University St, Tbilisi, Georgia</p>
-          <img class="footer__logo" src="../assets/images/fencing-symbol-svgrepo-com.svg" alt="" />
+          <img class="footer__logo" src="assets/images/fencing-symbol-svgrepo-com.svg" alt="" />
+
+          <div class="lang-wrapper">
+            <button class="lang-switcher__btn" data-btn="en">Eng</button>
+            <button class="lang-switcher__btn" data-btn="ge">Geo</button>
+            <button class="lang-switcher__btn" data-btn="ru">Rus</button>
+          </div>
+          
         </div>
 
+
         <div class="footer-contacts">
-          <h3 class="footer__title">Связаться с нами</h3>
+          <h3 class="footer__title" data-lang="contact-us">Связаться с нами</h3>
           <div class="footer-contacts__item">
             <a class="footer-contacts__link" href="tel:+995-597-757-512">
               <i class="fa-solid fa-phone"></i>
@@ -123,6 +131,8 @@
               <span class="footer-contacts__title">Telegram</span>
             </a>
           </div>
+
+
         </div>
       </div>
     </footer>

@@ -159,6 +159,8 @@ body {
 
 .address {
   text-align: center;
+  display: flex;
+  flex-direction: column;
 }
 
 .footer-contacts__item {
@@ -192,11 +194,20 @@ body {
   margin-top: 1rem;
 }
 
-.lang-switcher {
-  padding: 0.5rem;
+.lang-switcher__btn {
+  padding: 1rem;
   background-color: #000;
   color: #f8f8ff;
   border: 1px solid #f8f8ff;
+}
+
+.lang-switcher__btn:hover {
+  cursor: pointer;
+  color:#104489;
+}
+
+.lang-switcher__btn-active {
+  color: #104489;
 }
 
 
