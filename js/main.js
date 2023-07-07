@@ -617,7 +617,17 @@ langButtons.forEach((btn) => {
     resetActiveClass(langButtons, 'lang-switcher__btn-active')
     btn.classList.add('lang-switcher__btn-active')
     changeLang()
-  })
+  });
+  
+  //TODO: вынести в отдельный метод при рефакторинге!
+
+  btn.addEventListener('touchend', (event) => {
+    currentLang = event.target.dataset.btn
+    localStorage.setItem('language', event.target.dataset.btn)
+    resetActiveClass(langButtons, 'lang-switcher__btn-active')
+    btn.classList.add('lang-switcher__btn-active')
+    changeLang()
+  });
 })
 
 function resetActiveClass(arr, activeClass) {
