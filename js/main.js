@@ -594,7 +594,7 @@ function changeLang() {
 
   const russianQuestion = document.getElementById('russian_question')
   if (russianQuestion) {
-    if (currentLang !== 'ru' && currentPathName === '/index.html') {
+    if (currentLang !== 'ru' && currentPathName.includes('index.html')) {
       russianQuestion.style.display = 'none'
     } else {
       russianQuestion.style.display = 'block'
