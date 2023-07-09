@@ -231,6 +231,16 @@ const aboutPageTexts = {
     ge: 'ჩვენი კლუბის ფოტოები',
     ru: 'Фото нашего клуба',
   },
+  address: {
+    en: 'Address',
+    ge: 'მისამართი',
+    ru: 'Адрес',
+  },
+  'contact-us': {
+    en: 'Contact us',
+    ge: 'დაგვიკავშირდით',
+    ru: 'Связаться с нами',
+  },
 }
 
 const hobbyPageTexts = {
