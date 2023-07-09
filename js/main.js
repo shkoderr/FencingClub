@@ -582,6 +582,17 @@ function checkPagePathName() {
 }
 checkPagePathName()
 
+document.addEventListener('DOMContentLoaded', function () {
+  const russianQuestion = document.getElementById('russian_question')
+if (russianQuestion) {
+  if (currentLang !== 'ru' && currentPathName.includes('index.html')) {
+    russianQuestion.style.display = 'none'
+  } else {
+    russianQuestion.style.display = 'block'
+  }
+}
+}); 
+
 function changeLang() {
   checkPagePathName()
 
@@ -591,17 +602,6 @@ function changeLang() {
       elem.textContent = currentTexts[key][currentLang]
     }
   }
-
-  document.addEventListener('DOMContentLoaded', function () {
-    const russianQuestion = document.getElementById('russian_question')
-  if (russianQuestion) {
-    if (currentLang !== 'ru' && currentPathName.includes('index.html')) {
-      russianQuestion.style.display = 'none'
-    } else {
-      russianQuestion.style.display = 'block'
-    }
-  }
-  }); 
 }
 changeLang()
 
