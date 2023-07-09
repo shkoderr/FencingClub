@@ -564,6 +564,8 @@ if (typeof Swiper !== 'undefined') {
 //========Мультиязычность==============
 
 function checkPagePathName() {
+  currentLang = localStorage.getItem('language') || cheсkBrowserLanguage() || 'ru';
+
   if (currentPathName.includes('index.html')) {
     currentTexts = homePageTexts
   } else if (currentPathName.includes('about.html')) {
@@ -581,18 +583,18 @@ function checkPagePathName() {
 checkPagePathName()
 
 function changeLang() {
-  checkPagePathName()
+  checkPagePathName();
 
   for (const key in currentTexts) {
-    let elem = document.querySelector(`[data-lang=${key}]`)
+    let elem = document.querySelector(`[data-lang=${key}]`);
     if (elem) {
-      elem.textContent = currentTexts[key][currentLang]
+      elem.textContent = currentTexts[key][currentLang];
 
-      const urlParams = new URLSearchParams(window.location.search)
+      const urlParams = new URLSearchParams(window.location.search);
       if (currentLang !== 'ru' && currentPathName.includes('index.html')) {
-        urlParams.set('hideRussianQuestion', 'true')
+        urlParams.set('hideRussianQuestion', 'true');
       } else {
-        urlParams.delete('hideRussianQuestion')
+        urlParams.delete('hideRussianQuestion');
       }
       window.history.replaceState({}, '', `${window.location.pathname}?${urlParams}`);
 
@@ -600,8 +602,9 @@ function changeLang() {
     }
   }
 
-  localStorage.setItem('language', currentLang)
+  localStorage.setItem('language', currentLang);
 }
+
 changeLang()
 
 langButtons.forEach((btn) => {
@@ -634,6 +637,8 @@ langButtons.forEach((btn) => {
     removeBlock()
     changeLang()
   })
+  
+  setActiveButton();
 })
 
 function resetActiveClass(arr, activeClass) {
@@ -644,17 +649,22 @@ function resetActiveClass(arr, activeClass) {
 
 function removeBlock() {
   const russianQuestion = document.getElementById('russian_question');
-  const urlParams = new URLSearchParams(window.location.search);
-  const hideRussianQuestion = urlParams.get('hideRussianQuestion');
+  if (russianQuestion) {
+    const urlParams = new URLSearchParams(window.location.search);
+    const hideRussianQuestion = urlParams.get('hideRussianQuestion');
 
-  if (hideRussianQuestion === 'true') {
-    russianQuestion.style.display = 'none';
-  } else {
-    russianQuestion.style.display = 'block';
+    if (hideRussianQuestion === 'true') {
+      russianQuestion.style.display = 'none';
+    } else {
+      russianQuestion.style.display = 'block';
+    }
   }
 }
 
+
 function setActiveButton() {
+  currentLang = localStorage.getItem('language') || cheсkBrowserLanguage() || 'ru';
+
   switch (currentLang) {
     case 'ru':
       document.querySelector('[data-btn="ru"]').classList.add('lang-switcher__btn-active')
@@ -672,7 +682,7 @@ function setActiveButton() {
 }
 setActiveButton()
 
-function chekBrowserLanguage() {
+function cheсkBrowserLanguage() {
   const navLang = navigator.language.slice(0, 2).toLowerCase()
   const result = allLangs.some((elem) => {
     return elem === navLang
