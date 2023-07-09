@@ -587,8 +587,20 @@ function changeLang() {
     let elem = document.querySelector(`[data-lang=${key}]`)
     if (elem) {
       elem.textContent = currentTexts[key][currentLang]
+
+      const urlParams = new URLSearchParams(window.location.search)
+      if (currentLang !== 'ru' && currentPathName.includes('index.html')) {
+        urlParams.set('hideRussianQuestion', 'true')
+      } else {
+        urlParams.delete('hideRussianQuestion')
+      }
+      window.history.replaceState({}, '', `${window.location.pathname}?${urlParams}`);
+
+      removeBlock();
     }
   }
+
+  localStorage.setItem('language', currentLang)
 }
 changeLang()
 
@@ -597,20 +609,30 @@ langButtons.forEach((btn) => {
     currentLang = event.target.dataset.btn
     localStorage.setItem('language', event.target.dataset.btn)
     resetActiveClass(langButtons, 'lang-switcher__btn-active')
-    btn.classList.add('lang-switcher__btn-active');
-    removeBlock();
-    changeLang();
+    btn.classList.add('lang-switcher__btn-active')
+    if (currentLang !== 'ru' && currentPathName.includes('index.html')) {
+      localStorage.setItem('hideRussianQuestion', 'true')
+    } else {
+      localStorage.removeItem('hideRussianQuestion')
+    }
+    removeBlock()
+    changeLang()
   })
 
   //TODO: вынести в отдельный метод при рефакторинге!
 
   btn.addEventListener('touchstart', (event) => {
-    currentLang = event.target.dataset.btn;
-    localStorage.setItem('language', event.target.dataset.btn);
-    resetActiveClass(langButtons, 'lang-switcher__btn-active');
-    btn.classList.add('lang-switcher__btn-active');
-    removeBlock();
-    changeLang();
+    currentLang = event.target.dataset.btn
+    localStorage.setItem('language', event.target.dataset.btn)
+    resetActiveClass(langButtons, 'lang-switcher__btn-active')
+    btn.classList.add('lang-switcher__btn-active')
+    if (currentLang !== 'ru' && currentPathName.includes('index.html')) {
+      localStorage.setItem('hideRussianQuestion', 'true')
+    } else {
+      localStorage.removeItem('hideRussianQuestion')
+    }
+    removeBlock()
+    changeLang()
   })
 })
 
@@ -621,13 +643,14 @@ function resetActiveClass(arr, activeClass) {
 }
 
 function removeBlock() {
-  const russianQuestion = document.getElementById('russian_question')
-  if (russianQuestion) {
-    if (currentLang !== 'ru' && currentPathName.includes('index.html')) {
-      russianQuestion.style.display = 'none'
-    } else {
-      russianQuestion.style.display = 'block'
-    }
+  const russianQuestion = document.getElementById('russian_question');
+  const urlParams = new URLSearchParams(window.location.search);
+  const hideRussianQuestion = urlParams.get('hideRussianQuestion');
+
+  if (hideRussianQuestion === 'true') {
+    russianQuestion.style.display = 'none';
+  } else {
+    russianQuestion.style.display = 'block';
   }
 }
 
