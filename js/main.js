@@ -581,34 +581,15 @@ function checkPagePathName() {
 checkPagePathName()
 
 function changeLang() {
-  checkPagePathName();
+  checkPagePathName()
 
   for (const key in currentTexts) {
-    let elem = document.querySelector(`[data-lang=${key}]`);
+    let elem = document.querySelector(`[data-lang=${key}]`)
     if (elem) {
-      elem.textContent = currentTexts[key][currentLang];
-    }
-  }
-
-  const russianQuestion = document.getElementById('russian_question');
-  if (russianQuestion) {
-    if (currentLang !== 'ru' && currentPathName.includes('index.html')) {
-      russianQuestion.style.display = 'none';
-    } else {
-      russianQuestion.style.display = 'block';
+      elem.textContent = currentTexts[key][currentLang]
     }
   }
 }
-
-langButtons.forEach((btn) => {
-  btn.addEventListener('click', (event) => {
-    currentLang = event.target.dataset.btn;
-    localStorage.setItem('language', event.target.dataset.btn);
-    resetActiveClass(langButtons, 'lang-switcher__btn-active');
-    btn.classList.add('lang-switcher__btn-active');
-    changeLang();
-  });
-});
 changeLang()
 
 langButtons.forEach((btn) => {
@@ -616,36 +597,20 @@ langButtons.forEach((btn) => {
     currentLang = event.target.dataset.btn
     localStorage.setItem('language', event.target.dataset.btn)
     resetActiveClass(langButtons, 'lang-switcher__btn-active')
-    btn.classList.add('lang-switcher__btn-active')
-    changeLang()
-
-    const russianQuestion = document.getElementById('russian_question')
-    if (russianQuestion) {
-      if (currentLang !== 'ru' && currentPathName === '/index.html') {
-        russianQuestion.style.display = 'none'
-      } else {
-        russianQuestion.style.display = 'block'
-      }
-    }
+    btn.classList.add('lang-switcher__btn-active');
+    removeBlock();
+    changeLang();
   })
 
   //TODO: вынести в отдельный метод при рефакторинге!
 
   btn.addEventListener('touchstart', (event) => {
-    currentLang = event.target.dataset.btn
-    localStorage.setItem('language', event.target.dataset.btn)
-    resetActiveClass(langButtons, 'lang-switcher__btn-active')
-    btn.classList.add('lang-switcher__btn-active')
-    changeLang()
-
-    const russianQuestion = document.getElementById('russian_question')
-    if (russianQuestion) {
-      if (currentLang !== 'ru' && currentPathName === '/index.html') {
-        russianQuestion.style.display = 'none'
-      } else {
-        russianQuestion.style.display = 'block'
-      }
-    }
+    currentLang = event.target.dataset.btn;
+    localStorage.setItem('language', event.target.dataset.btn);
+    resetActiveClass(langButtons, 'lang-switcher__btn-active');
+    btn.classList.add('lang-switcher__btn-active');
+    removeBlock();
+    changeLang();
   })
 })
 
@@ -653,6 +618,17 @@ function resetActiveClass(arr, activeClass) {
   arr.forEach((elem) => {
     elem.classList.remove(activeClass)
   })
+}
+
+function removeBlock() {
+  const russianQuestion = document.getElementById('russian_question')
+  if (russianQuestion) {
+    if (currentLang !== 'ru' && currentPathName.includes('index.html')) {
+      russianQuestion.style.display = 'none'
+    } else {
+      russianQuestion.style.display = 'block'
+    }
+  }
 }
 
 function setActiveButton() {
