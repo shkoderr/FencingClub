@@ -566,25 +566,18 @@ if (typeof Swiper !== 'undefined') {
 //========Мультиязычность==============
 
 function checkPagePathName() {
-  switch (currentPathName) {
-    case '/index.html':
-      currentTexts = homePageTexts
-      break
-    case '/html/about.html':
-      currentTexts = aboutPageTexts
-      break
-    case '/html/hobby-group.html':
-      currentTexts = hobbyPageTexts
-      break
-    case '/html/personal.html':
-      currentTexts = personalPageTexts
-      break
-    case '/html/trial-session.html':
-      currentTexts = trialPageTexts
-      break
-    default:
-      currentTexts = homePageTexts
-      break
+  if (currentPathName.includes('index.html')) {
+    currentTexts = homePageTexts;
+  } else if (currentPathName.includes('about.html')) {
+    currentTexts = aboutPageTexts;
+  } else if (currentPathName.includes('hobby-group.html')) {
+    currentTexts = hobbyPageTexts;
+  } else if (currentPathName.includes('personal.html')) {
+    currentTexts = personalPageTexts;
+  } else if (currentPathName.includes('trial-session.html')) {
+    currentTexts = trialPageTexts;
+  } else {
+    currentTexts = hobbyPageTexts;
   }
 }
 checkPagePathName()
