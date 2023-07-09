@@ -592,7 +592,8 @@ function changeLang() {
     }
   }
 
-  const russianQuestion = document.getElementById('russian_question')
+  document.addEventListener('DOMContentLoaded', function () {
+    const russianQuestion = document.getElementById('russian_question')
   if (russianQuestion) {
     if (currentLang !== 'ru' && currentPathName.includes('index.html')) {
       russianQuestion.style.display = 'none'
@@ -600,6 +601,7 @@ function changeLang() {
       russianQuestion.style.display = 'block'
     }
   }
+  }); 
 }
 changeLang()
 
