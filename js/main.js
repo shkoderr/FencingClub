@@ -581,24 +581,34 @@ function checkPagePathName() {
 checkPagePathName()
 
 function changeLang() {
-  checkPagePathName()
+  checkPagePathName();
 
   for (const key in currentTexts) {
-    let elem = document.querySelector(`[data-lang=${key}]`)
+    let elem = document.querySelector(`[data-lang=${key}]`);
     if (elem) {
-      elem.textContent = currentTexts[key][currentLang]
+      elem.textContent = currentTexts[key][currentLang];
     }
   }
 
-  const russianQuestion = document.getElementById('russian_question')
+  const russianQuestion = document.getElementById('russian_question');
   if (russianQuestion) {
     if (currentLang !== 'ru' && currentPathName.includes('index.html')) {
-      russianQuestion.classList.add('hidden');
+      russianQuestion.style.display = 'none';
     } else {
-      russianQuestion.classList.remove('hidden');
+      russianQuestion.style.display = 'block';
     }
   }
 }
+
+langButtons.forEach((btn) => {
+  btn.addEventListener('click', (event) => {
+    currentLang = event.target.dataset.btn;
+    localStorage.setItem('language', event.target.dataset.btn);
+    resetActiveClass(langButtons, 'lang-switcher__btn-active');
+    btn.classList.add('lang-switcher__btn-active');
+    changeLang();
+  });
+});
 changeLang()
 
 langButtons.forEach((btn) => {
