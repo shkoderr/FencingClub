@@ -146,7 +146,7 @@ const homePageTexts = {
 }
 
 const aboutPageTexts = {
-  'title': {
+  title: {
     en: 'About Us',
     ge: 'ჩვენს შესახებ',
     ru: 'О нас',
@@ -234,7 +234,7 @@ const aboutPageTexts = {
 }
 
 const hobbyPageTexts = {
-  'title': {
+  title: {
     en: 'Hobby Group',
     ge: 'ჰობი - ჯგუფი',
     ru: 'Хобби группа',
@@ -521,28 +521,28 @@ if (typeof Swiper !== 'undefined') {
     grabCursor: true,
     direction: 'horizontal',
     loop: true,
-  
+
     autoplay: {
       delay: 2000,
-      disableOnInteraction: false
+      disableOnInteraction: false,
     },
-  
+
     pagination: {
       el: '.swiper-pagination',
       dynamicBullets: true,
       clickable: true,
     },
-  
+
     navigation: {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
     },
-  
+
     keyboard: {
       enabled: true,
       onlyInViewport: true,
     },
-  
+
     breakpoints: {
       450: {
         slidesPerView: 1,
@@ -550,48 +550,35 @@ if (typeof Swiper !== 'undefined') {
       650: {
         slidesPerView: 2,
         centeredSlides: false,
-        spaceBetween: 10
+        spaceBetween: 10,
       },
-  
+
       990: {
         slidesPerView: 3,
-        spaceBetween: 20
-  
-      }
-    }
-  });
-};
-
+        spaceBetween: 20,
+      },
+    },
+  })
+}
 
 //========Мультиязычность==============
 
 function checkPagePathName() {
   if (currentPathName.includes('index.html')) {
-    currentTexts = homePageTexts;
+    currentTexts = homePageTexts
   } else if (currentPathName.includes('about.html')) {
-    currentTexts = aboutPageTexts;
+    currentTexts = aboutPageTexts
   } else if (currentPathName.includes('hobby-group.html')) {
-    currentTexts = hobbyPageTexts;
+    currentTexts = hobbyPageTexts
   } else if (currentPathName.includes('personal.html')) {
-    currentTexts = personalPageTexts;
+    currentTexts = personalPageTexts
   } else if (currentPathName.includes('trial-session.html')) {
-    currentTexts = trialPageTexts;
+    currentTexts = trialPageTexts
   } else {
-    currentTexts = hobbyPageTexts;
+    currentTexts = hobbyPageTexts
   }
 }
 checkPagePathName()
-
-document.addEventListener('DOMContentLoaded', function () {
-  const russianQuestion = document.getElementById('russian_question')
-if (russianQuestion) {
-  if (currentLang !== 'ru' && currentPathName.includes('index.html')) {
-    russianQuestion.style.display = 'none'
-  } else {
-    russianQuestion.style.display = 'block'
-  }
-}
-}); 
 
 function changeLang() {
   checkPagePathName()
@@ -600,6 +587,15 @@ function changeLang() {
     let elem = document.querySelector(`[data-lang=${key}]`)
     if (elem) {
       elem.textContent = currentTexts[key][currentLang]
+    }
+  }
+
+  const russianQuestion = document.getElementById('russian_question')
+  if (russianQuestion) {
+    if (currentLang !== 'ru' && currentPathName.includes('index.html')) {
+      russianQuestion.classList.add('hidden');
+    } else {
+      russianQuestion.classList.remove('hidden');
     }
   }
 }
@@ -611,7 +607,7 @@ langButtons.forEach((btn) => {
     localStorage.setItem('language', event.target.dataset.btn)
     resetActiveClass(langButtons, 'lang-switcher__btn-active')
     btn.classList.add('lang-switcher__btn-active')
-    changeLang();
+    changeLang()
 
     const russianQuestion = document.getElementById('russian_question')
     if (russianQuestion) {
@@ -621,7 +617,7 @@ langButtons.forEach((btn) => {
         russianQuestion.style.display = 'block'
       }
     }
-  });
+  })
 
   //TODO: вынести в отдельный метод при рефакторинге!
 
@@ -630,7 +626,7 @@ langButtons.forEach((btn) => {
     localStorage.setItem('language', event.target.dataset.btn)
     resetActiveClass(langButtons, 'lang-switcher__btn-active')
     btn.classList.add('lang-switcher__btn-active')
-    changeLang();
+    changeLang()
 
     const russianQuestion = document.getElementById('russian_question')
     if (russianQuestion) {
@@ -640,7 +636,7 @@ langButtons.forEach((btn) => {
         russianQuestion.style.display = 'block'
       }
     }
-  });
+  })
 })
 
 function resetActiveClass(arr, activeClass) {
