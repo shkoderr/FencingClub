@@ -2,7 +2,7 @@ const headers = document.querySelectorAll('.accordeon__header')
 
 const langButtons = document.querySelectorAll('[data-btn]')
 const allLangs = ['en', 'ru', 'ge']
-let currentLang = localStorage.getItem('language') || chekBrowserLanguage() || 'ru'
+let currentLang = localStorage.getItem('language') || cheсkBrowserLanguage() || 'ru'
 
 const currentPathName = window.location.pathname
 let currentTextObject = {}
@@ -634,19 +634,19 @@ langButtons.forEach((btn) => {
 
   //TODO: вынести в отдельный метод при рефакторинге!
 
-  btn.addEventListener('touchstart', (event) => {
-    currentLang = event.target.dataset.btn
-    localStorage.setItem('language', event.target.dataset.btn)
-    resetActiveClass(langButtons, 'lang-switcher__btn-active')
-    btn.classList.add('lang-switcher__btn-active')
-    if (currentLang !== 'ru' && currentPathName.includes('index.html')) {
-      localStorage.setItem('hideRussianQuestion', 'true')
-    } else {
-      localStorage.removeItem('hideRussianQuestion')
-    }
-    removeBlock()
-    changeLang()
-  })
+  //btn.addEventListener('touchstart', (event) => {
+  //  currentLang = event.target.dataset.btn
+  //  localStorage.setItem('language', event.target.dataset.btn)
+  //  resetActiveClass(langButtons, 'lang-switcher__btn-active')
+  //  btn.classList.add('lang-switcher__btn-active')
+  //  if (currentLang !== 'ru' && currentPathName.includes('index.html')) {
+  //    localStorage.setItem('hideRussianQuestion', 'true')
+  //  } else {
+  //    localStorage.removeItem('hideRussianQuestion')
+  //  }
+  //  removeBlock()
+  //  changeLang()
+  //})
   
   setActiveButton();
 })
