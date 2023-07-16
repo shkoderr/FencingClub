@@ -10,8 +10,8 @@ let currentTextObject = {}
 const homePageTexts = {
   'home__page-title': {
     en: "Fencing Academy “BASA”",
-    ge: "Fencing Club 'Basa'",
-    ru: "Фехтовальный клуб 'BASA'",
+    ge: "Fencing Academy “BASA”",
+    ru: "Фехтовальный клуб “BASA”",
   },
   'home-header_link-1': {
     en: 'About us',
@@ -152,14 +152,14 @@ const homePageTexts = {
 
 const aboutPageTexts = {
   title: {
-    en: 'About Us',
+    en: 'About us',
     ge: 'ჩვენს შესახებ',
     ru: 'О нас',
   },
   'about__page-title': {
-    en: "Fencing Club 'Basa'",
-    ge: "Fencing Club 'Basa'",
-    ru: "Фехтовальный клуб 'BASA'",
+    en: "Fencing Academy “BASA”",
+    ge: "Fencing Academy “BASA”",
+    ru: "Фехтовальный клуб “BASA”",
   },
   'about-header_link-1': {
     en: 'Home Page',
@@ -172,67 +172,62 @@ const aboutPageTexts = {
     ru: 'Пробное занятие',
   },
   'about-header_link-3': {
-    en: 'Hobby Group',
-    ge: 'ჰობი - ჯგუფი',
-    ru: 'Хобби группа',
+    en: 'Hobby-Group',
+    ge: 'ჰობი-ჯგუფი',
+    ru: 'Хобби-группа',
   },
   'submit-btn': {
-    en: 'Sign up for a class',
+    en: 'Sign up for a trial class',
     ge: 'დარეგისტრირდით კლასში',
     ru: 'Записаться на занятие',
   },
-  mail: {
+  'cost': {
+    en: '50 Gel/person',
+    ge: '50 ლარი',
+    ru: '50 Gel/чел',
+  },
+  'mail': {
     en: 'E-mail',
     ge: 'ფოსტა',
     ru: 'Почта',
   },
   'about-header': {
-    en: 'About our club',
+    en: 'About us',
     ge: 'ჩვენი კლუბის შესახებ',
     ru: 'О нашем клубе',
   },
   'about-text__item-1': {
-    en: 'The BASA Club is one big family. We have a friendly international team of athletes and coaches.',
+    en: 'Fencing Academy “BASA” are like one big family, not just colleagues.',
     ge: 'კლუბი “BASA” - ერთი დიდი ოჯახია. ჩვენთან სპორტსმენებისა და მწვრთელების მეგობრული და ინტერნაციონალური კოლექტივია.',
     ru: 'Клуб “BASA” — одна большая семья. У нас дружный интернациональный коллектив спортсменов и тренеров.',
   },
   'about-text__item-2': {
-    en: 'The love of fencing unites us all. We train together and take part in competitions, travel together, celebrate birthdays and other holidays together.',
+    en: 'We all have a love for fencing. Together we train and take part in competitions. Together we travel and celebrate holidays and special occasions.',
     ge: 'ჩვენ ყველას ფარიკაობისადმი სიყვარული გვაერთიანებს. ჩვენ ერთად ვვარჯიშობთ და ვიღებთ მონაწილეობას შეჯიბრებებში, ერთად ვმოგზაურობთ, ერთად ავღნიშნავთ დაბადების დღეებსა და სხვა დღესასწაულებს.',
     ru: 'Любовь к фехтованию объединяет всех нас. Мы вместе тренируемся и принимаем участие в соревнованиях, вместе путешествуем, вместе отмечаем дни рождения и другие праздники.',
   },
   'about-text__item-3': {
-    en: 'Our athletes — children, juniors, adults and veterans — regularly perform and take prizes at local and international competitions.',
+    en: 'Our fencers — kids, juniors, seniors and veterans — participate in local and international competitions and win a lot of medals.',
     ge: 'ჩვენი სპორტსმენები - ბავშვები, მოზარდები, ზრდასრულები და ვეტერანები  - რეგულარულად ასპარეზობენ და საპრიზო ადგილებს იკავებენ ადგილობრივ და საერთაშორისო შეჯიბრებებზე.',
     ru: 'Наши спортсмены — дети, юниоры, взрослые и ветераны — регулярно выступают и занимают призовые места на локальных и международных соревнованиях.',
   },
   'about-text__item-4': {
-    en: 'In November 2022, we decided to launch an amateur project — a group for expats and residents in search of a hobby in Tbilisi who want to start fencing from scratch (for more information, see )',
-    ge: '2022 წლის ნოემბერში მივიღეთ გადაწყვეტილება წამოგვეწყო სამოყვარულო პროექტი - ჯგუფი ექსპატებისა და რეზიდენტებისთვის, რომლებიც თბილისში ჰობის ძიებაში არიან, რომელთაც სურთ ფარიკაობა ნულიდან დაიწყონ. (დეტალური ინფორმაცია იხ. )',
-    ru: 'В ноябре 2022 мы приняли решение запустить любительский проект — группу для экспатов и резидентов в поиске хобби в Тбилиси, которые хотят начать заниматься фехтованием с нуля (подробнее в разделе )',
-  },
-  'about-link-to-hobby': {
-    en: 'Hobby Group',
-    ge: 'ჰობი - ჯგუფი',
-    ru: 'Хобби группа',
+    en: 'In November 2022 we launched a new project — fencing classes for amateurs/ beginners who are seeking new hobby in Tbilisi (for more details see section "Hobby-Group").',
+    ge: '2022 წლის ნოემბერში მივიღეთ გადაწყვეტილება წამოგვეწყო სამოყვარულო პროექტი - ჯგუფი ექსპატებისა და რეზიდენტებისთვის, რომლებიც თბილისში ჰობის ძიებაში არიან, რომელთაც სურთ ფარიკაობა ნულიდან დაიწყონ. (დეტალური ინფორმაცია იხ "ჰობი-ჯგუფი".)',
+    ru: 'В ноябре 2022 мы приняли решение запустить любительский проект — группу для экспатов и резидентов в поиске хобби в Тбилиси, которые хотят начать заниматься фехтованием с нуля (подробнее в разделе "Хобби-группа").',
   },
   'about-text__item-5': {
-    en: 'We are on  We will be glad to see you in our classes! We are sure that you will also love fencing as much as we love this wonderful sport.',
-    ge: ' ჩვენ ვიმყოფებით  მიხარულნი ვიქნებით გიხილოთ ჩვენს მეცადინეობებზე! დარწმუნებულები ვართ, თქვენც ისევე შეგიყვარდებათ ფარიკაობა, როგორც ჩვენ გვიყვარს სპორტის ეს მშვენიერი სახეობა.',
-    ru: 'Мы находимся на  Будем рады видеть Вас на наших занятиях! Уверены, Вы тоже полюбите фехтование так же, как любим этот прекрасный вид спорта мы.',
-  },
-  'about-text__item-5-link': {
-    en: 'Arena 2 in Saburtalo (University Street, 6, 3rd floor).',
-    ge: 'არენა 2 -ში” საბურთალოზე. (უნივერსიტეტის ქ. 6, მე-3 სართ).',
-    ru: 'Арене 2 в Сабуртало (Университетская улица, д.6, 3 этаж).',
+    en: 'We are located in Saburtalo at Arena 2 (6 University street, 3rd storey). We are always glad to see you at our venue! We are sure you will love fencing as we do!',
+    ge: 'ჩვენ ვიმყოფებით არენა 2 -ში” საბურთალოზე. (უნივერსიტეტის ქ. 6, მე-3 სართ). მიხარულნი ვიქნებით გიხილოთ ჩვენს მეცადინეობებზე! დარწმუნებულები ვართ, თქვენც ისევე შეგიყვარდებათ ფარიკაობა, როგორც ჩვენ გვიყვარს სპორტის ეს მშვენიერი სახეობა.',
+    ru: 'Мы находимся на Арене 2 в Сабуртало (Университетская улица, д.6, 3 этаж). Будем рады видеть Вас на наших занятиях! Уверены, Вы тоже полюбите фехтование так же, как любим этот прекрасный вид спорта мы.',
   },
   'about-text__item-6': {
-    en: "Your Fencing Club 'BASA'",
+    en: "Yours Sincerely, Fencing Academy “BASA”",
     ge: 'თქვენი კლუბი “BASA”',
     ru: 'Ваш клуб “BASA”',
   },
   'about-slider__header': {
-    en: 'Photos of our club',
+    en: 'Photos of our Academy',
     ge: 'ჩვენი კლუბის ფოტოები',
     ru: 'Фото нашего клуба',
   },
@@ -255,9 +250,9 @@ const hobbyPageTexts = {
     ru: 'Хобби группа',
   },
   'hobby-title': {
-    en: "Fencing Club 'Basa'",
-    ge: "Fencing Club 'Basa'",
-    ru: "Фехтовальный клуб 'BASA'",
+    en: "Fencing Academy “BASA”",
+    ge: "Fencing Academy “BASA”",
+    ru: "Фехтовальный клуб “BASA”",
   },
   'hobby-header_link-1': {
     en: 'Home Page',
@@ -265,112 +260,117 @@ const hobbyPageTexts = {
     ru: 'На главную',
   },
   'hobby-header_link-2': {
-    en: 'About Us',
+    en: 'About us',
     ge: 'ჩვენს შესახებ',
     ru: 'О нас',
   },
   'hobby-header_link-3': {
-    en: 'Trial session',
+    en: 'Trial class',
     ge: 'საცდელი მეცადინეობა',
     ru: 'Пробное занятие',
   },
   'submit-btn': {
-    en: 'Sign up for a class',
+    en: 'Sign up for a trial class',
     ge: 'დარეგისტრირდით კლასში',
     ru: 'Записаться на занятие',
   },
-  mail: {
+  'cost': {
+    en: '50 Gel/person',
+    ge: '50 ლარი',
+    ru: '50 Gel/чел',
+  },
+  'mail': {
     en: 'E-mail',
     ge: 'ფოსტა',
     ru: 'Почта',
   },
   'hobby-header': {
-    en: 'Find a hobby in a new city for yourself? Easily!',
+    en: 'Picking up a new hobby in Tbilisi?',
     ge: 'იპოვნო ჰობი შენთვის ახალ ქალაქში? ძალზედ მარტივია!',
     ru: 'Найти хобби в новом для себя городе? Запросто!',
   },
   'hobby-text-1': {
-    en: 'In November 2022, we launched a new project — an amateur a group for adult fencers.',
+    en: 'In November 2022 we launched a new project — Hobby-group for senior fencers.',
     ge: '2022 წელს წამოვიწყეთ ახალი პროექტი - სამოყვარულო ჯგუფი ზრდასრული მოფარიკავეებისთვის.',
     ru: 'В ноябре 2022 мы запустили новый проект — любительскую группу для взрослых фехтовальщиков.',
   },
   'hobby-text-2': {
-    en: 'We invite everyone to join classes in a group of novice adults. The type of weapon is a sword.',
+    en: 'We are inviting all interested to join our classes for beginners/amateurs. Primary weapon — épée.',
     ge: 'ვიწვევთ ყველა მსურველს შემოუერთდეს დამწყებ ზრდასრულთა ჯგუფის მეცადინეობებს. იარაღის სახეობა - დაშნა.',
     ru: 'Приглашаем всех желающих присоединиться к занятиям в группе начинающих взрослых. Вид оружия — шпага.',
   },
   'hobby-text-3': {
-    en: 'The subscription fee is 200 GEL/month. Trainings are held three times a week.',
+    en: 'Monthly fee — 200 GEL. Trainings are held 3 times a week.',
     ge: 'ერთთვიანი აბონიმენტის ღირებულება - 200 ლარი. ვარჯიში ტარდება სამჯერ კვირაში.',
     ru: 'Стоимость абонемента — 200 GEL/месяц. Тренировки проводятся три раза в неделю.',
   },
   'hobby-text-4': {
-    en: 'All workouts start with a warm-up and end with a cool-down. We monitor the health and comfort of our students.',
+    en: 'We start every training with a warm-up and finish it with a cool-down. We value the safety and comfort of our students.',
     ge: 'ყველა ვარჯიში მოთელვით იწყება და მთავრდება ქულდაუნით. ჩვენ თვალ-ყურს ვადევნებთ  ჩვენი მოსწავლეების ჯანმრთელობასა და კომფორტს.',
     ru: 'Все тренировки начинаются с разминки и заканчиваются кул-дауном. Мы следим за здоровьем и комфортом наших учеников.',
   },
   'hobby-benefits': {
-    en: 'An integrated approach. In the program:',
+    en: 'Our regular trainings include:',
     ge: 'კომპლექსური მიდგომა. პროგრამაშია:',
     ru: 'Комплексный подход. В программе:',
   },
   'benefits-text-1': {
-    en: 'A wonderful international team.',
-    ge: 'შესანიშნავი ინტერნაციონალური კოლექტივი.',
-    ru: 'Замечательный интернациональный коллектив.',
+    en: 'Great international team',
+    ge: 'შესანიშნავი ინტერნაციონალური კოლექტივი',
+    ru: 'Замечательный интернациональный коллектив',
   },
   'benefits-text-2': {
-    en: 'Any age. Any level.',
-    ge: 'ნებისმიერი ასაკი. ნებისმიერი დონე.',
-    ru: 'Любой возраст. Любой уровень.',
+    en: 'Any age. Any level',
+    ge: 'ნებისმიერი ასაკი. ნებისმიერი დონე',
+    ru: 'Любой возраст. Любой уровень',
   },
   'benefits-text-3': {
-    en: 'Group classes.',
-    ge: 'ჯგუფური მეცადინეობა.',
-    ru: 'Групповые занятия.',
+    en: 'Group lessons',
+    ge: 'ჯგუფური მეცადინეობა',
+    ru: 'Групповые занятия',
   },
   'benefits-text-4': {
-    en: 'Movements',
+    en: 'Footwork',
     ge: 'გადაადგილება',
     ru: 'Передвижения',
   },
   'benefits-text-5': {
-    en: 'Work on targets.',
+    en: 'Target exercises',
     ge: 'სამიზნეზე მუშაობა',
-    ru: 'Работа на мишенях.',
+    ru: 'Работа на мишенях',
   },
   'benefits-text-6': {
-    en: 'Pair exercises',
+    en: 'Paired drills',
     ge: 'წყვილების ვარჯიშები',
     ru: 'Парные упражнения',
   },
   'benefits-text-7': {
-    en: 'Theoretical classes (video analysis)',
+    en: 'Video analysis',
     ge: 'თეორიული მეცადინეობა (ვიდეოანალიზი)',
     ru: 'Теоретические занятия (видеоанализ)',
   },
   'benefits-text-8': {
-    en: 'Fencing, of course. Lots and lots of sparring!',
+    en: 'Surely, fencing! Really a lot of fencing!',
     ge: 'რაღა თქმა უნდა - ფარიკაობა. ბევრი, ბევრი სპარინგი!',
     ru: 'Конечно же, фехтование. Много-много спарринга!',
   },
   'benefits-text-9': {
-    en: 'You will be able to participate in real competitions!',
+    en: 'You can also take part in real competitions!',
     ge: 'თქვენ შეგეძლებათ ნამდვილ შეჯიბრებებში მონაწილეობის მიღება!',
     ru: 'Вы сможете участвовать в настоящих соревнованиях!',
   },
   'personal-prompt': {
-    en: 'You can also sign up for individual classes',
+    en: 'Individual (1-on-1) lessons are also available',
     ge: 'ასევე შეგიძლიათ ჩაეწეროთ ინდივიდუალურ მეცადინეობაზე',
     ru: 'Также вы можете записаться на индивидуальные занятия',
   },
   'submit-personal': {
-    en: 'Individual classes',
+    en: 'Individual lessons',
     ge: 'ინდივიდუალური გაკვეთილები',
     ru: 'Индивидуальные уроки',
   },
   'hobby-photos': {
-    en: 'Photos of our club',
+    en: 'Photos of our Academy',
     ge: 'ჩვენი კლუბის ფოტოები',
     ru: 'Фото нашего клуба',
   },
@@ -388,32 +388,32 @@ const hobbyPageTexts = {
 
 const personalPageTexts = {
   title: {
-    en: 'Individual classes',
+    en: 'Individual lessons',
     ge: 'ინდივიდუალური გაკვეთილები',
     ru: 'Индивидуальные уроки',
   },
   'page-title': {
-    en: "Fencing Club 'Basa'",
-    ge: "Fencing Club 'Basa'",
-    ru: "Фехтовальный клуб 'BASA'",
+    en: "Fencing Academy “BASA”",
+    ge: "Fencing Academy “BASA”",
+    ru: "Фехтовальный клуб “BASA”",
   },
   'back-to-hobby': {
-    en: 'Back to the Hobby Group',
-    ge: 'დაბრუნება ჰობი ჯგუფში',
-    ru: 'Назад в Хобби группу',
+    en: 'Back to the Hobby-Group',
+    ge: 'დაბრუნება ჰობი-ჯგუფში',
+    ru: 'Назад в Хобби-группу',
   },
   'personal-header': {
-    en: 'Individual lessons (by agreement with the coach)',
+    en: 'Individual lessons (by arrangement with coach)',
     ge: 'ინდივიდუალური გაკვეთილები (მწვრთნელთან შეთანხმებით)',
     ru: 'Индивидуальные уроки (по договоренности с тренером)',
   },
   'personal-text-1': {
-    en: 'A very effective and extremely interesting way to learn the basics of fencing: working with a blade, choosing proper distance and other fencing aspects one-on-one with a professional trainer.',
+    en: 'A highly effective and extremely interesting way of learning basic fencing skills: blade work, distance choice, tactics etc. one-on-one with a professional coach.',
     ge: 'ძალიან ეფექტური და უჩვეულოდ საინტერესო ხერხია ფარიკაობის საფუძვლების დასაუფლებლად: იარაღის ფლობაზე მუშაობა, სწორი დისტანციის შერჩევა და სხვა ფარიკაობის ასპექტები - და ეს ყველაფერი პროფესიონალ მწვრთნელთან პირისპირ.',
-    ru: ' Очень эффективный и необычайно интересный способ научиться азам фехтования: работе с клинком, выбору    правильной дистанции и другим фехтовальным аспектам один на один с профессиональным тренером.',
+    ru: 'Очень эффективный и необычайно интересный способ научиться азам фехтования: работе с клинком, выбору    правильной дистанции и другим фехтовальным аспектам один на один с профессиональным тренером.',
   },
   'personal-text-2': {
-    en: 'Especially useful for novice amateur athletes. Individual approach. The coach draws up a lesson program taking into account the individual characteristics and schedule of the athlete.',
+    en: 'Very useful especially for beginners and new-comers. Coach will make an individual programme for every student according to his/her characteristics and schedule.',
     ge: 'იკ განსაკუთრებით სასარგებლოა დამწყებ სპორტმენ-მოყვარულთათვის. ინდივიდუალური მიდგომა. მწვრთნელი ადგენს მეცადინეობის პროგრამას სპორტსმენის ინდივიდუალური მახასიათებლებისა და მისი განრიგის გათვალისწინებით.',
     ru: 'Особенно полезны для начинающих спортсменов-любителей. Индивидуальный подход. Тренер составляет программу уроков с учетом индивидуальных особенностей и расписания спортсмена.',
   },
@@ -431,14 +431,14 @@ const personalPageTexts = {
 
 const trialPageTexts = {
   title: {
-    en: 'Trial session',
+    en: 'Trial class',
     ge: 'სასამართლო სხდომა',
     ru: 'Пробное занятие',
   },
   'page-title': {
-    en: "Fencing Club 'Basa'",
-    ge: "Fencing Club 'Basa'",
-    ru: "Фехтовальный клуб 'BASA'",
+    en: "Fencing Academy “BASA”",
+    ge: "Fencing Academy “BASA”",
+    ru: "Фехтовальный клуб “BASA”",
   },
   'trial-header_link-1': {
     en: 'Home Page',
@@ -446,47 +446,52 @@ const trialPageTexts = {
     ru: 'На главную',
   },
   'trial-header_link-2': {
-    en: 'About Us',
+    en: 'About us',
     ge: 'ჩვენს შესახებ',
     ru: 'О нас',
   },
   'trial-header_link-3': {
     en: 'Hobby-Group',
-    ge: 'ჰობი-ჯგუფი ',
+    ge: 'ჰობი-ჯგუფი',
     ru: 'Хобби-группа',
   },
   'submit-btn': {
-    en: 'Sign up for a class',
+    en: 'Sign up for a trial class',
     ge: 'დარეგისტრირდით კლასში',
     ru: 'Записаться на занятие',
   },
-  mail: {
+  'cost': {
+    en: '50 Gel/person',
+    ge: '50 ლარი',
+    ru: '50 Gel/чел',
+  },
+  'mail': {
     en: 'E-mail',
     ge: 'ფოსტა',
     ru: 'Почта',
   },
   'trial-header': {
-    en: 'How to understand how much fencing you like and suits you?',
+    en: 'Never tried fencing before?',
     ge: 'როგორ გავიგოთ, რამდენად მოგვწონს და რამდენად შესაფერისია ჩვენთვის ფარიკაობა?',
     ru: 'Как понять, насколько фехтование Вам нравится и подходит?',
   },
   'trial-text-1': {
-    en: 'Our club gives you a unique opportunity to try yourself in fencing! Come to us for a trial lesson and bring friends and relatives.',
+    en: 'Come to our trial class with your friends and relatives!',
     ge: ' ჩვენი კლუბი გთავაზობთ უნიკალურ შესაძლებლობას მოსინჯოთ თქვენი თავი ფარიკაობაში! მობრძანდით ჩვენთან საცდელ მეცადინეობაზე და მოიყვანეთ მეგობრები და ნათესავები.',
     ru: 'Наш клуб предоставляет Вам уникальную возможность попробовать себя в фехтовании! Приходите к нам на пробное занятие и приводите друзей и родственников.',
   },
   'trial-text-2': {
-    en: 'The cost of the lesson is 50 Gel / person. The trial session lasts 45 minutes.',
+    en: 'Our trial class is 50 GEL/person. Duration: 40 min.',
     ge: 'საცდელი მეცადინეობის ღირებულება - 50 ლარი 1 ადამიანი. მეცადინეობის ხანგრძლივობა 45 წუთია.',
     ru: 'Стоимость занятия — 50 Gel/чел. Пробное занятие длится 45 минут.',
   },
   'trial-text-3': {
-    en: 'A professional trainer will tell you about the club and fencing, answer any of your questions and show you how to properly hold a weapon and move in a fencing stance.',
+    en: 'Professional coach with tell you about fencing, answer your questions, teach you how to move in fencing position, hold weapon and lunge/hit.',
     ge: 'პროფესიონალი მწვრთნელი მოგიყვებათ კლუბისა და ფარიკაობის შესახებ, უპასუხებს თქვენს ნებისმიერ შეკითხვას და გაჩვენებთ როგორ დაიჭიროთ სწორად იარაღი და იმოძრაოთ ფარიკაობის დგომით.',
     ru: 'Профессиональный тренер расскажет Вам о клубе и фехтовании, ответит на любые Ваши вопросы и покажет Вам, как правильно держать оружие и двигаться в фехтовальной стойке.',
   },
   'trial-text-4': {
-    en: 'The culmination of the trial session is a real sword fight with a real opponent. Experience live genuine emotions from a fencing match!',
+    en: 'Real bouts with real swords and fencing suits against experienced opponents included! Fencing is fun!',
     ge: 'საცდელი მეცადინეობის კულმინაცია - ნამდვილი შერკინება დაშნით, რეალურ მეტოქესთან. გამოსცადეთ ფარიკაობის ორთაბრძოლით გამოწვეული ცოცხალი, ნამდვილი ემოციები!',
     ru: 'Кульминация пробного занятия — настоящий бой на шпаге с реальным соперником. Испытайте живые неподдельные эмоции от фехтовального поединка!',
   },
