@@ -167,7 +167,7 @@ const aboutPageTexts = {
     ru: 'На главную',
   },
   'about-header_link-2': {
-    en: 'Trial session',
+    en: 'Trial class',
     ge: 'საცდელი მეცადინეობა',
     ru: 'Пробное занятие',
   },
