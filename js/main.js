@@ -9,7 +9,7 @@ let currentTextObject = {}
 
 const homePageTexts = {
   'home__page-title': {
-    en: "Fencing Club 'Basa'",
+    en: "Fencing Academy “BASA”",
     ge: "Fencing Club 'Basa'",
     ru: "Фехтовальный клуб 'BASA'",
   },
@@ -19,27 +19,32 @@ const homePageTexts = {
     ru: 'О нас',
   },
   'home-header_link-2': {
-    en: 'Trial session',
+    en: 'Trial class',
     ge: 'საცდელი მეცადინეობა',
     ru: 'Пробное занятие',
   },
   'home-header_link-3': {
-    en: 'Hobby Group',
-    ge: 'ჰობი - ჯგუფი',
-    ru: 'Хобби группа',
+    en: 'Hobby-Group',
+    ge: 'ჰობი-ჯგუფი',
+    ru: 'Хобби-группа',
   },
   'submit-btn': {
-    en: 'Sign up for a class',
+    en: 'Sign up for a trial class',
     ge: 'დარეგისტრირდით კლასში',
     ru: 'Записаться на занятие',
   },
-  mail: {
+  'cost': {
+    en: '50 Gel/person',
+    ge: '50 ლარი',
+    ru: '50 Gel/чел',
+  },
+  'mail': {
     en: 'E-mail',
     ge: 'ფოსტა',
     ru: 'Почта',
   },
   'home-description-about': {
-    en: 'The BASA Club is one big family. We have a friendly international team of athletes and coaches. The love of fencing is what unites us all.',
+    en: 'Fencing Academy “BASA” are like one big family, not just colleagues. We all have a love for fencing. Together we train and take part in competitions.',
     ge: 'კლუბი “BASA” - ერთი დიდი ოჯახია. ჩვენთან სპორტსმენებისა და მწვრთელების მეგობრული და ინტერნაციონალური კოლექტივია. ჩვენ ყველას ფარიკაობისადმი სიყვარული გვაერთიანებს.',
     ru: 'Клуб “BASA” — одна большая семья. У нас дружный интернациональный коллектив спортсменов и тренеров. Любовь к фехтованию — это то, что всех нас объединяет.',
   },
@@ -59,12 +64,12 @@ const homePageTexts = {
     ru: 'О нас',
   },
   'hobby-group': {
-    en: 'Hobby Group',
-    ge: 'ჰობი - ჯგუფი',
-    ru: 'Хобби группа',
+    en: 'Hobby-Group',
+    ge: 'ჰობი-ჯგუფი',
+    ru: 'Хобби-группа',
   },
   'home-description-hobby': {
-    en: 'Find a hobby in a new city for yourself? Easily! In November 2022, we launched a new project — an amateur a group for adult fencers.',
+    en: 'Picking up a new hobby in Tbilisi? In November 2022 we launched a new project — Hobby-group for senior fencers.',
     ge: 'იპოვნო ჰობი შენთვის ახალ ქალაქში? ძალზედ მარტივია! 2022 წელს წამოვიწყეთ ახალი პროექტი - სამოყვარულო ჯგუფი ზრდასრული მოფარიკავეებისთვის.',
     ru: 'Найти хобби в новом для себя городе? Запросто! В ноябре 2022 мы запустили новый проект — любительскую группу для взрослых фехтовальщиков.',
   },
@@ -74,62 +79,62 @@ const homePageTexts = {
     ru: 'Часто задаваемые вопросы',
   },
   'accordeon-header-1': {
-    en: "I want my child/children to practice fencing. Do you have a children's group?",
+    en: "I want my kid/children go fencing. Is there any kids class?",
     ge: 'მინდა ჩემი შვილი/ შვილები ფარიკაობით დაკავევდნენ. გაქვთ თუ არა საბავშვო ჯგუფი?',
     ru: 'Я хочу, чтобы мой ребенок/дети занимались фехтованием. Есть ли у вас детская группа?',
   },
   'accordeon-content-1': {
-    en: "This site is dedicated to an adult project. Of course, our club has children's groups for different ages and wonderful children's coaches. Please send us a private message or call to sign up for a trial session.",
+    en: "This site is mostly about our senior project. Of course, we have kids groups too and excellent children’s coaches. Please send us a message or call us to sign up for a trial class.",
     ge: 'ეს საიტი ეძღვნება ზრდასრულთა პროექტს. რა თქმა უნდა, კლუბში გვაქვს საბავშვო ჯგუფები სხვადასხვა ასაკისთვის და გვყავს საოცარი ბავშვთა მწვრთნელები. გთხოვთ მოგვწეროთ პირადი შერყობინება ან დაგვირეკოთ, რათა ჩაეწეროთ საცდელ მეცადინეობაზე.',
     ru: 'Этот сайт посвящен взрослому проекту. Конечно, у нас в клубе есть детские группы для разных возрастов и замечательные детские тренеры. Пожалуйста, напишите нам личное сообщение или позвоните, чтобы записаться на пробное занятие.',
   },
   'accordeon-header-2': {
-    en: "I'm not a beginner, I've been fencing before. Is there a band for me in the club?",
+    en: "I’m not a first-timer. I used to fence before. Can I join?",
     ge: 'ახალბედა არ ვარ, ადრე ვვარჯიშობდი ფარიკაობაში. არის კლუბში ჩემთვის შესაფერისი ჯგუფი?',
     ru: 'Я не новичок, раньше уже занимался фехтованием. Есть ли в клубе группа для меня?',
   },
   'accordeon-content-2': {
-    en: 'Of course! Come, our experienced trainers will help you choose a group and make a convenient program for you, depending on your experience and wishes.',
+    en: 'Sure! Our experienced coaches will help you choose a group according to your level and experience.',
     ge: 'რა თქმა უნდა! მობრძანდით, ჩვენი გამოცდილი მწვრთნელები დაგეხმარებიან ჯგუფის შერჩევაში და თქვენზე მორგებული პროგრამის შედგენაში, თქვენი გამოცდილებისა და სურვილების მიხედვით.',
     ru: 'Конечно! Приходите, наши опытные тренеры помогут Вам выбрать группу и составить удобную программу для Вас в зависимости от опыта и пожеланий.',
   },
   'accordeon-header-3': {
-    en: 'Is it safe to practice fencing?',
+    en: 'Is fencing a safe sport?',
     ge: 'უსაფრთხოა თუ არა ფარიკაობაში ვარჯიში?',
     ru: 'Безопасно ли заниматься фехтованием?',
   },
   'accordeon-content-3': {
-    en: 'Provided that safety precautions are followed, fencing is one of the most non-dangerous sports. It is less traumatic than, for example, football.',
+    en: 'If you follow simple rules, fencing is one of the safest sports. It’s even less dangerous than football.',
     ge: ' ფარიკაობის უსაფრთხოების ტექნიკის დაცვის შემთხვევაში, ეს ერთ-ერთი ყველაზე უსაფრთხო სპორტის სახეობაა. ფარიკაობა ნაკლებად ტრავმულია, ვიდრე, მაგალითად ფეხბურთი.',
     ru: 'При условии соблюдения техники безопасности фехтование - один из самых неопасных видов спорта. Он менее травматичен чем, например, футбол.',
   },
   'accordeon-header-4': {
-    en: "I don't have any fencing equipment. Do I need to buy it?",
+    en: "I have no fencing equipment. Shall I buy it to join classes?",
     ge: 'მე არ მაქვს ფარიკაობის ინვენტარი. საჭიროა თუ არა მისი ყიდვა?',
     ru: 'У меня нет фехтовального инвентаря. Нужно ли его покупать?',
   },
   'accordeon-content-4': {
-    en: 'For a trial class and the first month of classes, the club provides all the necessary equipment. After that, you can buy inventory in the club store or rent it.',
+    en: 'For a trial class and first month of regular classes you will be given a spare equipment. Later you can buy suit and sword in our club’s shop or rent it.',
     ge: 'საცდელი გაკვეთილისა და მეცადინეობის პირველი თვისთვის, კლუბი უზრუნველყოფს ყველა საჭირო ინვენტარს. შემდგომ, შეგიძლიათ შეიძინოთ ინვენტარი კლუბის მაღაზიაში, ან იქირაოთ.',
     ru: 'Для пробного занятия и первого месяца занятий клуб предоставляет весь необходимый инвентарь. После Вы можете купить инвентарь в магазине клуба или взять его в аренду.',
   },
   'accordeon-header-5': {
-    en: 'Is it necessary to attend three classes a week? Will I lag behind others if I walk less often than others?',
+    en: 'Do I have to come 3 times a week? Will I quickly fall behind if I visit less classes?',
     ge: 'აუცილებელია თუ არა მეცადინეობაზე დასწრება კვირაში სამჯერ? ჩამოვრჩები თუ არა სხვებს, თუ სხვებზე იშვიათად ვივლი?',
     ru: 'Обязательно ли посещать три занятия в неделю? Отстану ли я от других, если буду ходить реже, чем остальные?',
   },
   'accordeon-content-5': {
-    en: "No. There is a subscription in our club. You can come 3 times a week, it's 12-15 classes a month.",
+    en: "No. We have a monthly fee, and only you decide how many training to visit. The maximum is 3 times a week (12-15 classes/month). If you miss some group lessons, you can always compensate the lag with individual lessons.",
     ge: 'არა. ჩვენს კლუბში მოქმედებს აბონიმენტი. შესაძლებელია კვირაში სამჯერ მოსვლა, ეს კი თვეში 12-15 მეცადინეობა გახლავთ.',
     ru: 'Нет. В нашем клубе действует абонемент. Можно приходить 3 раза в неделю, это 12-15 занятий в месяц. Пропущенные занятия всегда можно компенсировать за счет индивидуальных занятий с тренером.',
   },
   'accordeon-header-6': {
-    en: 'What kind of weapons can you practice on?',
+    en: 'What weapons can I fence?',
     ge: 'რა სახის იარაღითაა ვარჯიში შესაძლებელი?',
     ru: 'На каком виде оружия можно заниматься?',
   },
   'accordeon-content-6': {
-    en: 'The club holds classes on three types of weapons: rapier, sword, saber.',
+    en: 'Foil, épée and sabre',
     ge: 'კლუბში მეცადინეობა ტარდება სამი სახის იარაღით: რაპირა, დაშნა, ხმალი.',
     ru: 'В клубе проводятся занятия на трех видах оружия: рапире, шпаге, сабле.',
   },

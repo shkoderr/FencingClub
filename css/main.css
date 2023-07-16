@@ -219,6 +219,7 @@ body {
   border: 1px solid #104489;
   font-size: 14px;
   text-transform: uppercase;
+  line-height: 1.5;
   font-weight: 500;
   letter-spacing: 2px;
   background: #104489;
@@ -228,6 +229,10 @@ body {
   -webkit-transition: all 0.2s ease-in;
   -moz-transition: all 0.2s ease-in;
   transition: all 0.2s ease-in;
+}
+
+.cost {
+  text-transform: initial;
 }
 
 .submit-btn:hover {
