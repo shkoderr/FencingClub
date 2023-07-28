@@ -194,7 +194,7 @@ body {
   display: flex;
   flex-direction: column;
   margin-top: 1rem;
-  position: absolute;
+  position: absolute !important;
   top: 0.5rem;
   right: 1rem;
 }
@@ -555,6 +555,16 @@ body {
 
   .address {
     order: 1;
+  }
+
+  /* LANGUAGE BUTTONS */
+  .lang-wrapper {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+    position: absolute !important;
+    top: 0.5rem;
+    right: 1rem;
   }
 }
 
