@@ -191,23 +191,32 @@ body {
 
 /* -----LANGUAGE SELECT----- */
 .lang-wrapper {
+  display: flex;
+  flex-direction: column;
   margin-top: 1rem;
+  position: absolute;
+  top: 0.5rem;
+  right: 1rem;
 }
 
 .lang-switcher__btn {
-  padding: 1rem;
-  background-color: #000;
+  padding: 0.5rem;
+  background-color: #104489;
+  opacity: 0.7;
   color: #f8f8ff;
-  border: 1px solid #f8f8ff;
+  border: none;
+  transition: .2s linear;
 }
 
 .lang-switcher__btn:hover {
   cursor: pointer;
   color:#104489;
+  background-color: #f8f8ff;
 }
 
 .lang-switcher__btn-active {
   color: #104489;
+  background-color: #f8f8ff;
 }
 
 
