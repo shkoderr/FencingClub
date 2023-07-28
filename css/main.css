@@ -219,6 +219,46 @@ body {
   background-color: #f8f8ff;
 }
 
+/* Общие стили для lang-switcher */
+.lang-wrapper {
+  align-self: self-end;
+  position: relative;
+  display: inline-block;
+}
+
+.lang-switcher__select {
+  position: relative;
+  display: inline-block;
+  background-color: #f0f0f0;
+  color: #333;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 4px;
+}
+
+.lang-switcher__current {
+  display: inline-block;
+}
+
+.lang-switcher__options {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  display: none;
+  background-color: #f0f0f0;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.lang-switcher__btn {
+  padding: 8px;
+}
+
+.lang-switcher__select:hover .lang-switcher__options {
+  display: block;
+}
+
+
 
 /* -----BUTTONS----- */
 .submit-btn {
