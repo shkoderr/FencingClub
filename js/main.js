@@ -612,9 +612,9 @@ function changeLang() {
 
       const urlParams = new URLSearchParams(window.location.search);
       if (currentLang !== 'ru' && currentPathName.includes('index.html')) {
-        urlParams.set('hideRussianQuestion', 'true');
+        urlParams.set('hideQuestion', 'true');
       } else {
-        urlParams.delete('hideRussianQuestion');
+        urlParams.delete('hideQuestion');
       }
       window.history.replaceState({}, '', `${window.location.pathname}?${urlParams}`);
 
@@ -634,9 +634,9 @@ langButtons.forEach((btn) => {
     resetActiveClass(langButtons, 'lang-switcher__btn-active')
     btn.classList.add('lang-switcher__btn-active')
     if (currentLang !== 'ru' && currentPathName.includes('index.html')) {
-      localStorage.setItem('hideRussianQuestion', 'true')
+      localStorage.setItem('hideQuestion', 'true')
     } else {
-      localStorage.removeItem('hideRussianQuestion')
+      localStorage.removeItem('hideQuestion')
     }
     removeBlock()
     changeLang()
@@ -650,9 +650,9 @@ langButtons.forEach((btn) => {
   //  resetActiveClass(langButtons, 'lang-switcher__btn-active')
   //  btn.classList.add('lang-switcher__btn-active')
   //  if (currentLang !== 'ru' && currentPathName.includes('index.html')) {
-  //    localStorage.setItem('hideRussianQuestion', 'true')
+  //    localStorage.setItem('hideQuestion', 'true')
   //  } else {
-  //    localStorage.removeItem('hideRussianQuestion')
+  //    localStorage.removeItem('hideQuestion')
   //  }
   //  removeBlock()
   //  changeLang()
@@ -671,9 +671,9 @@ function removeBlock() {
   const russianQuestion = document.getElementById('russian_question');
   if (russianQuestion) {
     const urlParams = new URLSearchParams(window.location.search);
-    const hideRussianQuestion = urlParams.get('hideRussianQuestion');
+    const hideQuestion = urlParams.get('hideQuestion');
 
-    if (hideRussianQuestion === 'true') {
+    if (hideQuestion === 'true') {
       russianQuestion.style.display = 'none';
     } else {
       russianQuestion.style.display = 'block';
