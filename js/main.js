@@ -1,7 +1,17 @@
 const headers = document.querySelectorAll('.accordeon__header')
 
 const langButtons = document.querySelectorAll('[data-btn]')
-const allLangs = ['en', 'ru', 'ge']
+const allLangs = ['en', 'ru', 'ge'];
+const phoneLink = document.getElementById('phone_link');
+const mailLink = document.getElementById('mail_link');
+const fbLink = document.getElementById('fb_link');
+const tgLink = document.getElementById('tg_link');
+const smsLink = document.getElementById('sms_link');
+const footerPhone = document.getElementById('footer_phone');
+const footerMail = document.getElementById('footer_mail');
+const footerFb = document.getElementById('footer_fb');
+const footerTg = document.getElementById('footer_tg');
+const footerSms = document.getElementById('footer_sms');
 let currentLang = localStorage.getItem('language') || cheсkBrowserLanguage() || 'ru'
 
 const currentPathName = window.location.pathname
@@ -619,6 +629,7 @@ function changeLang() {
       window.history.replaceState({}, '', `${window.location.pathname}?${urlParams}`);
 
       removeBlock();
+      setContacts();
     }
   }
 
@@ -710,5 +721,27 @@ function cheсkBrowserLanguage() {
 
   if (result) {
     return navLang
+  }
+}
+
+function setContacts() {
+  if (currentLang !== 'ge') {
+    phoneLink.style.display = 'none';
+    tgLink.style.display = 'flex';
+    fbLink.style.display = 'flex';
+    smsLink.style.display = 'none';
+    footerPhone.style.display = 'none';
+    footerTg.style.display = 'block';
+    footerFb.style.display = 'block';
+    footerSms.style.display = 'none';
+  } else {
+    phoneLink.style.display = 'flex';
+    tgLink.style.display = 'none';
+    fbLink.style.display = 'none';
+    smsLink.style.display = 'flex';
+    footerPhone.style.display = 'block';
+    footerTg.style.display = 'none';
+    footerFb.style.display = 'none';
+    footerSms.style.display = 'block';
   }
 }

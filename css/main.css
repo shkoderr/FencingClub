@@ -106,7 +106,7 @@ body {
   margin-top: 20px;
   display: flex;
   justify-content: center;
-  gap: 5rem;
+  gap: 10rem;
 }
 
 .contacts__item {
@@ -409,7 +409,7 @@ body {
 @media (max-width: 990px) {
 
   .contacts {
-    gap: 2rem;
+    gap: 4rem;
   }
 
   .container-sign {
