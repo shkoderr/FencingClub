@@ -618,7 +618,7 @@ function changeLang() {
   for (const key in currentTexts) {
     let elem = document.querySelector(`[data-lang=${key}]`);
     if (elem) {
-      elem.textContent = currentTexts[key][currentLang];
+      elem.innerText = currentTexts[key][currentLang];
 
       const urlParams = new URLSearchParams(window.location.search);
       if (currentLang !== 'ru' && currentPathName.includes('index.html')) {
@@ -652,22 +652,6 @@ langButtons.forEach((btn) => {
     removeBlock()
     changeLang()
   })
-
-  //TODO: вынести в отдельный метод при рефакторинге!
-
-  //btn.addEventListener('touchstart', (event) => {
-  //  currentLang = event.target.dataset.btn
-  //  localStorage.setItem('language', event.target.dataset.btn)
-  //  resetActiveClass(langButtons, 'lang-switcher__btn-active')
-  //  btn.classList.add('lang-switcher__btn-active')
-  //  if (currentLang !== 'ru' && currentPathName.includes('index.html')) {
-  //    localStorage.setItem('hideQuestion', 'true')
-  //  } else {
-  //    localStorage.removeItem('hideQuestion')
-  //  }
-  //  removeBlock()
-  //  changeLang()
-  //})
   
   setActiveButton();
 })
@@ -725,23 +709,37 @@ function cheсkBrowserLanguage() {
 }
 
 function setContacts() {
-  if (currentLang !== 'ge') {
-    phoneLink.style.display = 'none';
-    tgLink.style.display = 'flex';
-    fbLink.style.display = 'flex';
-    smsLink.style.display = 'none';
-    footerPhone.style.display = 'none';
-    footerTg.style.display = 'block';
-    footerFb.style.display = 'block';
-    footerSms.style.display = 'none';
+  if (!currentPathName.includes('personal.html')) {
+    if (currentLang !== 'ge') {
+      phoneLink.style.display = 'none';
+      tgLink.style.display = 'flex';
+      fbLink.style.display = 'flex';
+      smsLink.style.display = 'none';
+      footerPhone.style.display = 'none';
+      footerTg.style.display = 'block';
+      footerFb.style.display = 'block';
+      footerSms.style.display = 'none';
+    } else {
+      phoneLink.style.display = 'flex';
+      tgLink.style.display = 'none';
+      fbLink.style.display = 'none';
+      smsLink.style.display = 'flex';
+      footerPhone.style.display = 'block';
+      footerTg.style.display = 'none';
+      footerFb.style.display = 'none';
+      footerSms.style.display = 'block';
+    }
   } else {
-    phoneLink.style.display = 'flex';
-    tgLink.style.display = 'none';
-    fbLink.style.display = 'none';
-    smsLink.style.display = 'flex';
-    footerPhone.style.display = 'block';
-    footerTg.style.display = 'none';
-    footerFb.style.display = 'none';
-    footerSms.style.display = 'block';
+    if (currentLang !== 'ge') {
+      footerPhone.style.display = 'none';
+      footerTg.style.display = 'block';
+      footerFb.style.display = 'block';
+      footerSms.style.display = 'none';
+    } else {
+      footerPhone.style.display = 'block';
+      footerTg.style.display = 'none';
+      footerFb.style.display = 'none';
+      footerSms.style.display = 'block';
+    }
   }
 }
